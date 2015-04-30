@@ -501,7 +501,7 @@ class Report(object):
 
         # If format is not PDF, we return it directly
         # ONLY PDF CAN BE MERGE!
-        if self.outputFormat != 'PDF':
+        if self.outputFormat != 'pdf':
             self.obj = external_pdf(content, self.outputFormat)
             return (self.obj.content, self.outputFormat)
 
