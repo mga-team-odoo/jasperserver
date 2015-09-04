@@ -261,13 +261,17 @@ class Jasper(object):
         return self.body
 
 if __name__ == '__main__':
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+    log = logging.getLogger('jasperlib')
+
     tjs_host = os.environ.get('JS_HOST', 'localhost')
     tjs_port = os.environ.get('JS_PORT', 8080)
     tjs_user = os.environ.get('JS_USER', 'jasperadmin')
     tjs_pass = os.environ.get('JS_PASS', 'jasperadmin')
 
     def outlog(text):
-        print text  # noqa
+        log.debug(text)
 
     try:
         js = Jasper(tjs_host, int(tjs_port), tjs_user, tjs_pass)

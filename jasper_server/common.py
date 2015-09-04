@@ -24,7 +24,7 @@
 
 from openerp import netsvc
 import logging
-from jasper import report_jasper
+from .jasper import report_jasper
 
 _logger = logging.getLogger(__name__)
 

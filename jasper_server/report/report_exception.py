@@ -46,6 +46,9 @@ class EvalError(JasperException):
     pass
 
 if __name__ == '__main__':
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+    log = logging.getLogger('jasperlib')
     try:
         # test str method
         try:
@@ -65,8 +68,8 @@ if __name__ == '__main__':
                 'Message must return "Test JasperException"'
 
     except AssertionError, a:
-        print 'Test failed: %s' % a  # noqa
+        log.debug('Test failed: %s' % a)
     finally:
-        print 'Finished'  # noqa
+        log.debug('Finished')
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

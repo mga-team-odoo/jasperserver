@@ -24,8 +24,8 @@
 
 import ir_actions_wizard  # noqa
 import obj_server  # noqa
-import obj_document  #noqa
-import ir_actions  #noqa
+import obj_document  # noqa
+import ir_actions  # noqa
 import report  # noqa
 import wizard  # noqa
 
