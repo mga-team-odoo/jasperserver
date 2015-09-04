@@ -348,6 +348,7 @@ class Report(object):
                 'company_footer2': '',
                 'company_website': cny.partner_id.website or '',
                 'company_currency': cny.currency_id.name or '',
+                'company_curr': cny.currency_id.symbol or '',
 
                 # Search the default address for the company.
                 'company_street': cny.partner_id.street or '',
