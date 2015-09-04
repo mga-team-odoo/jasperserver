@@ -28,8 +28,5 @@ install:
  - pip install coveralls flake8 python-dime
 
 script:
-    - travis_run_flake8
     - travis_run_tests 7.0
 
-after_success:
-  coveralls
