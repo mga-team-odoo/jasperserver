@@ -31,9 +31,9 @@ import logging
 from openerp.report.render import render
 from openerp.tools.translate import _
 # from httplib2 import Http, ServerNotFoundError, HttpLib2Error
-from parser import WriteContent, ParseResponse
+from .parser import WriteContent, ParseResponse
 from .common import parameter_dict, merge_pdf
-from report_exception import JasperException, EvalError
+from .report_exception import JasperException, EvalError
 from pyPdf import PdfFileWriter, PdfFileReader
 from openerp.addons.jasper_server import jasperlib as jslib
 
@@ -348,6 +348,7 @@ class Report(object):
                 'company_footer2': '',
                 'company_website': cny.partner_id.website or '',
                 'company_currency': cny.currency_id.name or '',
+                'company_curr': cny.currency_id.symbol or '',
 
                 # Search the default address for the company.
                 'company_street': cny.partner_id.street or '',

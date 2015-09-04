@@ -38,7 +38,6 @@ class LoadFile(orm.TransientModel):
     }
 
     def import_file(self, cr, uid, ids, context=None):
-        print context
         this = self.browse(cr, uid, ids[0], context=context)
         content = base64.decodestring(this.datafile)
         self.pool['jasper.document'].parse_jrxml(

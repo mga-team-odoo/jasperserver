@@ -191,7 +191,10 @@ def WriteContent(content, list_file):
     os.close(fd)
 
 if __name__ == '__main__':
-    print ParseHTML("""<html><head><title>Apache Tomcat/5.5.20 - Rapport d'erreur</title>
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+    log = logging.getLogger('jasperlib')
+    log.debug(ParseHTML("""<html><head><title>Apache Tomcat/5.5.20 - Rapport d'erreur</title>
 <style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;
                     background-color:#525D76;font-size:22px;}
            H2 {font-family:Tahoma,Arial,sans-serif;color:white;
@@ -212,6 +215,6 @@ if __name__ == '__main__':
 <p><b>message</b> <u>Bad credentials</u></p><p><b>description</b>
 <u>La requête nécessite une authentification HTTP (Bad credentials).</u></p>
 <HR size="1" noshade="noshade"><h3>Apache Tomcat/5.5.20</h3>
-</body></html>""")
+</body></html>"""))
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

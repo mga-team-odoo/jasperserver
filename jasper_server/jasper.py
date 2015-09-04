@@ -25,8 +25,8 @@
 from openerp.report.interface import report_int
 from openerp.osv.osv import except_osv
 
-from report.report_soap import Report
-from report.report_exception import JasperException
+from .report.report_soap import Report
+from .report.report_exception import JasperException
 
 import logging
 
