@@ -22,11 +22,11 @@
 #
 ##############################################################################
 
-import ir_actions_wizard  # noqa
-import obj_server  # noqa
-import obj_document  # noqa
-import ir_actions  # noqa
-import report  # noqa
-import wizard  # noqa
+import ir_actions_wizard
+import obj_server
+import obj_document
+import ir_actions
+import report
+import wizard
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
