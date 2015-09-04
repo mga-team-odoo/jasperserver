@@ -30,3 +30,5 @@ install:
 script:
     - travis_run_tests 7.0
 
+after_success:
+    - travis_after_tests_success
