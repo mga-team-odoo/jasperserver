@@ -32,7 +32,7 @@ from jasper_server.common import registered_report, KNOWN_PARAMETERS
 from StringIO import StringIO
 from lxml import etree
 import base64
-import jasperlib
+from . import jasperlib
 import logging
 
 _logger = logging.getLogger(__name__)

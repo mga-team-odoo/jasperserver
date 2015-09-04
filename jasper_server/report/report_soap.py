@@ -31,9 +31,9 @@ import logging
 from openerp.report.render import render
 from openerp.tools.translate import _
 # from httplib2 import Http, ServerNotFoundError, HttpLib2Error
-from parser import WriteContent, ParseResponse
+from .parser import WriteContent, ParseResponse
 from .common import parameter_dict, merge_pdf
-from report_exception import JasperException, EvalError
+from .report_exception import JasperException, EvalError
 from pyPdf import PdfFileWriter, PdfFileReader
 from openerp.addons.jasper_server import jasperlib as jslib
 

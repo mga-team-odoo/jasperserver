@@ -65,8 +65,8 @@ if __name__ == '__main__':
                 'Message must return "Test JasperException"'
 
     except AssertionError, a:
-        print 'Test failed: %s' % a
+        print 'Test failed: %s' % a  # noqa
     finally:
-        print 'Finished'
+        print 'Finished'  # noqa
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

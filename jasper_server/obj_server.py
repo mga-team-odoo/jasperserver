@@ -30,7 +30,7 @@ from openerp.tools.translate import _
 from openerp.modules import get_module_path
 import openerp
 import os
-import jasperlib
+from . import jasperlib
 
 from lxml.etree import Element, tostring
 
