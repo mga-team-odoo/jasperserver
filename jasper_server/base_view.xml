@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        ##############################################################################
+        #
+        #    jasper_server module for OpenERP, Management module for Jasper Server
+        #    Copyright (C) 2015 MIROUNGA ([http://www.mirounga.fr/]) 
+        #              Christophe CHAUVET [christophe.chauvet@mirounga.fr]
+        #
+        #    This file is a part of jasper_server
+        #
+        #    jasper_server is free software: you can redistribute it and/or modify
+        #    it under the terms of the GNU Affero General Public License as published by
+        #    the Free Software Foundation, either version 3 of the License, or
+        #    (at your option) any later version.
+        #
+        #    jasper_server is distributed in the hope that it will be useful,
+        #    but WITHOUT ANY WARRANTY; without even the implied warranty of
+        #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        #    GNU Affero General Public License for more details.
+        #
+        #    You should have received a copy of the GNU Affero General Public License
+        #    along with this program.  If not, see [http://www.gnu.org/licenses/].
+        #
+        ##############################################################################
+
+        <record id="view_res_lang_form" model="ir.ui.view">
+            <field name="name">res.lang.form - Jasper</field>
+            <field name="model">res.lang</field>
+            <field name="inherit_id" ref="base.res_lang_form"/>
+            <field name="priority" eval="20"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/group/field[@name='translatable']" position="after">
+                    <newline/>
+                    <separator string="Jasper Locale Format" colspan="6"/>
+                    <field name="js_pattern_date"/>
+                    <field name="js_pattern_time"/>
+                    <field name="js_pattern_datetime"/>
+                    <field name="js_pattern_currency"/>
+                    <field name="js_pattern_number"/>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>
