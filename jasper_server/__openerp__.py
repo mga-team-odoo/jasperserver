@@ -24,7 +24,7 @@
 
 {
     'name': 'JasperReport Server Interface',
-    'version': '6.3',
+    'version': '6.4',
     'category': 'Reporting',
     'sequence': 20,
     'complexity': "expert",
