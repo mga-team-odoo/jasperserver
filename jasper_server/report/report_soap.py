@@ -36,6 +36,8 @@ from .common import parameter_dict, merge_pdf
 from .report_exception import JasperException, EvalError
 from pyPdf import PdfFileWriter, PdfFileReader
 from openerp.addons.jasper_server import jasperlib as jslib
+from openerp.osv import orm
+
 
 _logger = logging.getLogger('openerp.addons.jasper_server.report')
 
@@ -347,8 +349,13 @@ class Report(object):
                                                      self.uid,
                                                      context=context)
             if hasattr(cur_obj, 'company_id') and cur_obj.company_id:
-                cny = self.pool.get('res.company').browse(
-                    self.cr, self.uid, cur_obj.company_id.id, context=context)
+                try:
+                    cny = self.pool.get('res.company').browse(
+                        self.cr, self.uid, cur_obj.company_id.id, context=context)
+                    cny.name
+                except orm.except_orm as e:
+                    # If rules block, we choose the user company
+                    cny = user.company_id
             else:
                 cny = user.company_id
 
