@@ -65,6 +65,7 @@ In collaboration with Eric Vernichon (from Everlibre)
         'wizard/load_file_view.xml',
         'obj_server_view.xml',
         'obj_document_view.xml',
+        'base_view.xml',
     ],
     'demo': [
         'demo/jasper_document.xml',

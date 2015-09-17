@@ -23,6 +23,7 @@
 ##############################################################################
 
 import ir_actions_wizard
+import base
 import obj_server
 import obj_document
 import ir_actions

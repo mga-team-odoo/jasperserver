@@ -14,7 +14,7 @@ addons:
       - python-httplib2
 
 env:
-  - VERSION="7.0" ODOO_REPO="odoo/odoo"
+  - VERSION="7.0" ODOO_REPO="odoo/odoo" LINT_CHECK="0"
   - VERSION="7.0" ODOO_REPO="OCA/OCB" LINT_CHECK="0"
   - VERSION="7.0" ODOO_REPO="OCA/OCB" UNIT_TEST="1" LINT_CHECK="0"
 

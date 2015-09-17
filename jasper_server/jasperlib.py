@@ -30,12 +30,15 @@ import socket
 import re
 import email
 import os
+import logging
 
 KNOWN_FORMAT = [
     'PDF', 'XLS', 'XLSX', 'HTML', 'RTF',
     'CSV', 'XML', 'DOCX', 'ODT', 'ODS',
     'JPRINT'
 ]
+
+_logger = logging.getLogger('openerp.addons.jasper_server.report')
 
 
 # Create some exception
@@ -222,7 +225,9 @@ class Jasper(object):
                 p.text = str(v)
 
         rq.append(rd)
-        return etree.tostring(rq, pretty_print=True)
+        res = etree.tostring(rq, pretty_print=True)
+        _logger.debug(res)
+        return res
 
     def run_report(self, uri='/', output='PDF', params=None):
         """
@@ -261,7 +266,6 @@ class Jasper(object):
         return self.body
 
 if __name__ == '__main__':
-    import logging
     logging.basicConfig(level=logging.DEBUG)
     log = logging.getLogger('jasperlib')
 
