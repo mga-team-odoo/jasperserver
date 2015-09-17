@@ -319,6 +319,19 @@ class Report(object):
                 'uid': self.uid,
             }
 
+            # Retrieve pattern from res.lang
+            lang_obj = self.pool['res.lang']
+            lang_ids = lang_obj.search(self.cr, self.uid, [('code', '=', language or 'en_US')], context=context)
+            if lang_ids:
+                lg = lang_obj.browse(self.cr, self.uid, lang_ids[0], context=context)
+                d_par.update({
+                    'pattern_date': lg.js_pattern_date or '',
+                    'pattern_time': lg.js_pattern_time or '',
+                    'pattern_datetime': lg.js_pattern_datetime or '',
+                    'pattern_currency': lg.js_pattern_currency or '',
+                    'pattern_number': lg.js_pattern_number or '',
+                })
+
             # If XML we must compose it
             if self.attrs['params'][2] == 'xml':
                 d_xml = self.js_obj.generator(self.cr, self.uid, self.model,
