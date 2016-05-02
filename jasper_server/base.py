@@ -37,4 +37,18 @@ class res_lang(orm.Model):
         'js_pattern_number': fields.char('Pattern Number', size=32, help='Jasper pattern number'),
     }
 
+class res_groups(orm.Model):
+    _inherit = 'res.groups'
+
+    _columns = {
+        'is_jasper': fields.boolean(
+            'JasperServer',
+            help='Dedicate groups for JasperServer'),
+    }
+
+    _defaults = {
+        'is_jasper': False,
+    }
+
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
