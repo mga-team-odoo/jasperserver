@@ -2,6 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
+.. image:: https://travis-ci.org/mga-team-odoo/jasperserver.svg?branch=7.0
+   :target: https://travis-ci.org/mga-team-odoo/jasperserver
+
 ============
 jasperserver
 ============
