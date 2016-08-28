@@ -2,7 +2,7 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-.. image:: https://travis-ci.org/mga-team-odoo/jasperserver.svg?branch=7.0
+.. image:: https://travis-ci.org/mga-team-odoo/jasperserver.svg?branch=8.0
    :target: https://travis-ci.org/mga-team-odoo/jasperserver
 
 ============
@@ -17,7 +17,7 @@ Installation
 
 To install this module, you need to:
 
-#. git clone https://github.com/mga-team-odoo/jasperserver.git
+#. git clone -b 8.0 https://github.com/mga-team-odoo/jasperserver.git
 #. Add it to the addons path
 
 Configuration
@@ -25,7 +25,12 @@ Configuration
 
 To configure this module, you need to:
 
-#. Go to ...
+#. Go to Settings
+#. Jasper Reports
+#. On Server menu, add the information about the jasper server
+#. On Document, declare your print entry for the related model
+#. Got ot the model an click on print
+#. That's all
 
 
 Bug Tracker
