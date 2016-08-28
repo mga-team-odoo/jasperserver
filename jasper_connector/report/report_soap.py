@@ -38,7 +38,7 @@ from .common import parameter_dict, merge_pdf
 from .report_exception import JasperException, EvalError
 from pyPdf import PdfFileWriter, PdfFileReader
 from openerp.addons.jasper_connector import jasperlib as jslib
-from openerp.osv import orm
+# from openerp.osv import orm
 from openerp import SUPERUSER_ID
 
 
@@ -326,9 +326,12 @@ class Report(object):
 
             # Retrieve pattern from res.lang
             lang_obj = self.pool['res.lang']
-            lang_ids = lang_obj.search(self.cr, self.uid, [('code', '=', language or 'en_US')], context=context)
+            lang_ids = lang_obj.search(self.cr, self.uid,
+                                       [('code', '=', language or 'en_US')],
+                                       context=context)
             if lang_ids:
-                lg = lang_obj.browse(self.cr, self.uid, lang_ids[0], context=context)
+                lg = lang_obj.browse(self.cr, self.uid, lang_ids[0],
+                                     context=context)
                 d_par.update({
                     'pattern_date': lg.js_pattern_date or '',
                     'pattern_time': lg.js_pattern_time or '',
@@ -353,14 +356,15 @@ class Report(object):
                                                      context=context)
             if hasattr(cur_obj, 'company_id') and cur_obj.company_id:
                 cny = self.pool.get('res.company').browse(
-                    self.cr, SUPERUSER_ID, cur_obj.company_id.id, context=context)
+                    self.cr, SUPERUSER_ID, cur_obj.company_id.id,
+                    context=context)
             else:
                 cny = user.company_id
 
             d_par.update({
                 'company_name': cny.name,
-                'company_logo': cny.name.encode('ascii',
-                                                'ignore').replace(' ', '_').replace('-', '_'),
+                'company_logo': cny.name.encode(
+                    'ascii', 'ignore').replace(' ', '_').replace('-', '_'),
                 'company_header1': cny.rml_header1 or '',
                 'company_footer1': cny.rml_footer or '',
                 'company_footer2': '',

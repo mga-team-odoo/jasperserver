@@ -35,17 +35,23 @@ _logger = logging.getLogger(__name__)
 class ResLang(models.Model):
     _inherit = 'res.lang'
 
-    js_pattern_date = fields.Char(string='Pattern Date', size=32, help='Jasper pattern date')
-    js_pattern_time = fields.Char(string='Pattern Time', size=32, help='Jasper pattern time')
-    js_pattern_datetime = fields.Char(string='Pattern Date Time', size=64, help='Jasper pattern datetime')
-    js_pattern_currency = fields.Char(string='Pattern Currency', size=32, help='Jasper pattern currency')
-    js_pattern_number = fields.Char(string='Pattern Number', size=32, help='Jasper pattern number')
+    js_pattern_date = fields.Char(string='Pattern Date', size=32,
+                                  help='Jasper pattern date')
+    js_pattern_time = fields.Char(string='Pattern Time', size=32,
+                                  help='Jasper pattern time')
+    js_pattern_datetime = fields.Char(string='Pattern Date Time', size=64,
+                                      help='Jasper pattern datetime')
+    js_pattern_currency = fields.Char(string='Pattern Currency', size=32,
+                                      help='Jasper pattern currency')
+    js_pattern_number = fields.Char(string='Pattern Number', size=32,
+                                    help='Jasper pattern number')
 
 
 class ResGroups(models.Model):
     _inherit = 'res.groups'
 
-    is_jasper = fields.Boolean(string='JasperServer', help='Dedicate groups for JasperServer',
+    is_jasper = fields.Boolean(string='JasperServer',
+                               help='Dedicate groups for JasperServer',
                                default=False)
 
 
@@ -70,19 +76,22 @@ class IrActionReport(models.Model):
 
     def _lookup_report(self, cr, name):
         """
-        Use new report function to detect old report and if use custom python parser
+        Use new report function to detect old report and
+        use custom python parser
         """
         if 'report.' + name in openerp.report.interface.report_int._reports:
-            new_report = openerp.report.interface.report_int._reports['report.' + name]
-            if not isinstance(new_report, report_jasper):
-                new_report = None
+            rp = openerp.report.interface.report_int._reports['report.' + name]  # noqa
+            if not isinstance(rp, report_jasper):
+                rp = None
         else:
-            cr.execute("SELECT * FROM ir_act_report_xml WHERE report_name=%s AND report_type=%s", (name, 'jasper'))
+            cr.execute("""SELECT * FROM ir_act_report_xml
+                           WHERE report_name=%s AND report_type=%s""",
+                       (name, 'jasper'))
             r = cr.dictfetchone()
-            new_report = r and report_jasper('report.'+r['report_name']) or None
+            rp = r and report_jasper('report.'+r['report_name']) or None
 
-        if new_report:
-            return new_report
+        if rp:
+            return rp
 
         return super(IrActionReport, self)._lookup_report(cr, name)
 

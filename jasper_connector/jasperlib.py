@@ -198,10 +198,10 @@ class Jasper(object):
             tree = etree.parse(fp)
             fp.close()
 
-            raise ServerError('[' +
-                              tree.xpath('//returnCode')[0].text.encode('utf-8')  # noqa
-                              + ']' +
-                              tree.xpath('//returnMessage')[0].text.encode('utf-8'))  # noqa
+            raise ServerError(
+                u'[%s] %s' % (tree.xpath('//returnCode')[0].text.encode('utf-8'),  # noqa
+                tree.xpath('//returnMessage')[0].text.encode('utf-8'))
+            )
 
     def create_request(self, operation='list', wsType='', uri='/', name='',
                        arguments=None, params=None):
