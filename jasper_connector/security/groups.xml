@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <openerp>
         <data noupdate="0">
-                <record id="jasper_server.menu_jasper" model="ir.ui.menu">
-                        <field name="groups_id" eval="[(6,0,[ref('base.group_system')])]"/>
+                <record id="menu_jasper" model="ir.ui.menu">
+                    <field name="name">Jasper Connector</field>
+                    <field name="groups_id" eval="[(6,0,[ref('base.group_system')])]"/>
                 </record>
 
                 <!-- Add new category to display the group below inside a combobox -->

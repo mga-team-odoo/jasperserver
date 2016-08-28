@@ -3,19 +3,19 @@
     <data>
         ##############################################################################
         #
-        #    jasper_server module for OpenERP, 
+        #    jasper_connector module for OpenERP, 
         #    Copyright (C) 2010-2013 SYLEAM Info Services ([http://www.Syleam.fr/]) 
         #                  Damien CRIER
-        #                  Christophe CHAUVET [christophe.chauvet@syleam.fr]
+        #                  Christophe CHAUVET [christophe.chauvet@gmail.com]
         #
-        #    This file is a part of jasper_server
+        #    This file is a part of jasper_connector
         #
-        #    jasper_server is free software: you can redistribute it and/or modify
+        #    jasper_connector is free software: you can redistribute it and/or modify
         #    it under the terms of the GNU General Public License as published by
         #    the Free Software Foundation, either version 3 of the License, or
         #    (at your option) any later version.
         #
-        #    jasper_server is distributed in the hope that it will be useful,
+        #    jasper_connector is distributed in the hope that it will be useful,
         #    but WITHOUT ANY WARRANTY; without even the implied warranty of
         #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         #    GNU General Public License for more details.
@@ -56,7 +56,7 @@
         </record>
 
         <record model="ir.actions.act_window" id="act_open_document_extension_view">
-            <field name="name">Jasper Document Extension</field>
+            <field name="name">Document Extension</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">jasper.document.extension</field>
             <field name="view_type">form</field>
@@ -81,8 +81,8 @@
         </record>
 
         <menuitem id="menu_jasper_document_extension" 
-            parent="jasper_server.menu_jasper"
-            sequence="20"
+            parent="menu_jasper_conn"
+            sequence="60"
             action="act_open_document_extension_view"/>
 
         ##
@@ -301,7 +301,7 @@
         </record>
 
         <record model="ir.actions.act_window" id="act_open_document_view">
-            <field name="name">Jasper Report</field>
+            <field name="name">Document report</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">jasper.document</field>
             <field name="view_type">form</field>
@@ -325,8 +325,8 @@
         </record>
 
         <menuitem id="menu_jasper_document" 
-            parent="base.menu_config"
-            name="Jasper Reports"
+            parent="menu_jasper_conn"
+            name="Documents"
             sequence="20"
             action="act_open_document_view"
             groups="group_jasper_manager"/>

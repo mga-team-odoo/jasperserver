@@ -1,18 +1,20 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    jasper_server module for OpenERP,
+#    jasper_connector module for OpenERP,
 #    Copyright (C) 2010-2011 SYLEAM Info Services (<http://www.Syleam.fr/>)
 #                            Damien CRIER
+#    Copyright (C) 2015 MIROUNGA (<http://www.mirounga.fr/>)
+#              Christophe CHAUVET <christophe.chauvet@gmail.com>
 #
-#    This file is a part of jasper_server
+#    This file is a part of jasper_connector
 #
-#    jasper_server is free software: you can redistribute it and/or modify
+#    jasper_connector is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
 #    (at your option) any later version.
 #
-#    jasper_server is distributed in the hope that it will be useful,
+#    jasper_connector is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #    GNU General Public License for more details.
@@ -22,17 +24,16 @@
 #
 ##############################################################################
 
-
 from openerp.osv import osv
 from openerp.osv import orm
 from openerp.osv import fields
 from openerp.tools.sql import drop_view_if_exists
 from openerp.tools.translate import _
-from jasper_server.common import registered_report, KNOWN_PARAMETERS
+from openerp.addons.jasper_connector.common import registered_report, KNOWN_PARAMETERS
 from StringIO import StringIO
 from lxml import etree
 import base64
-from . import jasperlib
+from openerp.addons.jasper_connector import jasperlib
 import logging
 
 _logger = logging.getLogger(__name__)
@@ -65,7 +66,7 @@ class jasper_document(orm.Model):
         """
         if not context:
             context = {}
-        extension_obj = self.pool.get('jasper.document.extension')
+        extension_obj = self.pool['jasper.document.extension']
         ext_ids = extension_obj.search(cr, uid, [], context=context)
         extensions = extension_obj.read(cr, uid, ext_ids, context=context)
         ext = [(extension['jasper_code'],
@@ -169,7 +170,7 @@ class jasper_document(orm.Model):
         Create an entry in ir_actions_report_xml
         and ir.values
         """
-        act_report_obj = self.pool.get('ir.actions.report.xml')
+        act_report_obj = self.pool['ir.actions.report.xml']
 
         doc = self.browse(cr, uid, id, context=context)
         if doc.report_id:
@@ -199,7 +200,7 @@ class jasper_document(orm.Model):
             cr.execute("""UPDATE jasper_document SET report_id=%s
                            WHERE id=%s""", (report_id, id))
             value = 'ir.actions.report.xml,' + str(report_id)
-            self.pool.get('ir.model.data').ir_set(cr, uid, 'action',
+            self.pool['ir.model.data'].ir_set(cr, uid, 'action',
                                                   'client_print_multi',
                                                   doc.name,
                                                   [doc.model_id.model],
@@ -218,8 +219,8 @@ class jasper_document(orm.Model):
             ('value', '=', 'ir.actions.report.xml,%d' % report_id),
             # ('object', '=', True),
         ]
-        return self.pool.get('ir.values').search(cr, uid, args,
-                                                 context=context)
+        return self.pool['ir.values'].search(
+            cr, uid, args, context=context)
 
     def get_action_report(self, cr, uid, module, name, datas=None,
                           context=None):
@@ -239,7 +240,7 @@ class jasper_document(orm.Model):
         if datas is None:
             datas = {}
 
-        mod_obj = self.pool.get('ir.model.data')
+        mod_obj = self.pool['ir.model.data']
         result = mod_obj.get_object_reference(cr, uid, module, name)
         id = result and result[1] or False
         service = 'jasper.report_%d' % (id,)
@@ -257,7 +258,7 @@ class jasper_document(orm.Model):
         if not self.action_values(cr, uid, doc.report_id.id, context=context):
             value = 'ir.actions.report.xml,%d' % doc.report_id.id
             _logger.debug('create_values -> ' + value)
-            self.pool.get('ir.model.data').ir_set(cr, uid, 'action',
+            self.pool['ir.model.data'].ir_set(cr, uid, 'action',
                                                   'client_print_multi',
                                                   doc.name,
                                                   [doc.model_id.model],
@@ -271,10 +272,9 @@ class jasper_document(orm.Model):
         Only remove link in ir.values, not the report
         """
         doc = self.browse(cr, uid, id, context=context)
-        self.pool.get('ir.values').unlink(cr, uid,
-                                          self.action_values(cr, uid,
-                                                             doc.report_id.id,
-                                                             context=context))
+        self.pool['ir.values'].unlink(
+            cr, uid, self.action_values(
+                cr, uid, doc.report_id.id, context=context))
         _logger.debug('unlink_values')
         return True
 
@@ -368,15 +368,17 @@ class jasper_document(orm.Model):
     def check_report(self, cr, uid, ids, context=None):
         # TODO, use jasperlib to check if report exists
         curr = self.browse(cr, uid, ids[0], context=context)
-        js_server = self.pool.get('jasper.server')
+        js_server = self.pool['jasper.server']
         if curr.server_id:
             jss = js_server.browse(cr, uid, curr.server_id.id, context=context)
         else:
             js_server_ids = js_server.search(cr, uid, [('enable', '=', True)],
                                              context=context)
             if not js_server_ids:
-                raise osv.except_osv(_('Error'),
-                                     _('No JasperServer configuration found !'))  # noqa
+                raise osv.except_osv(
+                    _('Error'),
+                    _('No JasperServer configuration found !')
+                )
 
             jss = js_server.browse(cr, uid, js_server_ids[0], context=context)
 

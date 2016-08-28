@@ -1,18 +1,20 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    jasper_server module for OpenERP,
+#    jasper_connector module for OpenERP,
 #    Copyright (C) 2010-2011 SYLEAM Info Services (<http://www.syleam.fr/>)
-#                  Christophe CHAUVET <christophe.chauvet@syleam.fr>
+#                  Christophe CHAUVET <christophe.chauvet@gmail.com>
+#    Copyright (C) 2015 MIROUNGA (<http://www.mirounga.fr/>)
+#              Christophe CHAUVET <christophe.chauvet@gmail.com>
 #
-#    This file is a part of jasper_server
+#    This file is a part of jasper_connector
 #
-#    jasper_server is free software: you can redistribute it and/or modify
+#    jasper_connector is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
 #    (at your option) any later version.
 #
-#    jasper_server is distributed in the hope that it will be useful,
+#    jasper_connector is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #    GNU General Public License for more details.
@@ -22,25 +24,25 @@
 #
 ##############################################################################
 
-import pooler
 import os
 import time
 import base64
 import logging
-
+from openerp import pooler
 from openerp.report.render import render
 from openerp.tools.translate import _
+
 # from httplib2 import Http, ServerNotFoundError, HttpLib2Error
 from .parser import WriteContent, ParseResponse
 from .common import parameter_dict, merge_pdf
 from .report_exception import JasperException, EvalError
 from pyPdf import PdfFileWriter, PdfFileReader
-from openerp.addons.jasper_server import jasperlib as jslib
+from openerp.addons.jasper_connector import jasperlib as jslib
 from openerp.osv import orm
 from openerp import SUPERUSER_ID
 
 
-_logger = logging.getLogger('openerp.addons.jasper_server.report')
+_logger = logging.getLogger('openerp.addons.jasper_connector.report')
 
 ##
 # If cStringIO is available, we use it

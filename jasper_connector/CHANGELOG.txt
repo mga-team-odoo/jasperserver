@@ -51,7 +51,7 @@ Improvements
  * add prototypes for create/write/add_wizard
  * add jasper_document and jasper_document_extension objects and view
  * add references in __terp__ and __init__
- * Add generate method to the jasper_server method
+ * Add generate method to the jasper_connector method
  * Possibility to ban a model when use to relation fields
  * Possibility to indent the XML when exaact the template
  * report path to the python path

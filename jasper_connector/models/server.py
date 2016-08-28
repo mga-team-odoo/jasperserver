@@ -1,18 +1,20 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    jasper_server module for OpenERP,
+#    jasper_connector module for OpenERP,
 #    Copyright (C) 2009-2011 SYLEAM Info Services (<http://www.syleam.fr/>)
 #                            Christophe CHAUVET
+#    Copyright (C) 2015 MIROUNGA (<http://www.mirounga.fr/>)
+#              Christophe CHAUVET <christophe.chauvet@gmail.com>
 #
-#    This file is a part of jasper_server
+#    This file is a part of jasper_connector
 #
-#    jasper_server is free software: you can redistribute it and/or modify
+#    jasper_connector is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
 #    (at your option) any later version.
 #
-#    jasper_server is distributed in the hope that it will be useful,
+#    jasper_connector is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #    GNU General Public License for more details.
@@ -30,7 +32,7 @@ from openerp.tools.translate import _
 from openerp.modules import get_module_path
 import openerp
 import os
-from . import jasperlib
+from openerp.addons.jasper_connector import jasperlib
 
 from lxml.etree import Element, tostring
 
@@ -146,7 +148,7 @@ class JasperServer(orm.Model):
                 cr.commit()
 
             fct_file = openerp.tools.misc.file_open(os.path.join(
-                get_module_path('jasper_server'), 'sql', 'plpython.sql'))
+                get_module_path('jasper_connector'), 'sql', 'plpython.sql'))
             try:
                 query = fct_file.read() % {'db_user': config.get('db_user',
                                                                  'oerp')}
@@ -154,6 +156,7 @@ class JasperServer(orm.Model):
                 cr.commit()
             finally:
                 fct_file.close()
+                cr.execute('RESET ROLE')
 
         super(JasperServer, self).__init__(pool, cr)
 

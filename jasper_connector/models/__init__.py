@@ -2,10 +2,8 @@
 ##############################################################################
 #
 #    jasper_connector module for OpenERP
-#    Copyright (c) 2008-2009 EVERLIBRE (http://everlibre.fr) Eric VERNICHON
-#    Copyright (C) 2009-2011 SYLEAM ([http://www.syleam.fr]) Christophe CHAUVET
-#    Copyright (C) 2013-2016 Mirounga ([http://mirounga.fr])
-#                            Christophe CHAUVET <christophe.chauvet@gmail.com>
+#    Copyright (C) 2015 MIROUNGA (<http://www.mirounga.fr/>)
+#              Christophe CHAUVET <christophe.chauvet@gmail.com>
 #
 #    This file is a part of jasper_connector
 #
@@ -24,6 +22,8 @@
 #
 ##############################################################################
 
-from . import load_file  # noqa
+from . import base
+from . import document
+from . import server
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

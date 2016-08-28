@@ -3,17 +3,19 @@
     <data>
         ##############################################################################
         #
-        #    jasper_server module for OpenERP, 
+        #    jasper_connector module for OpenERP, 
         #    Copyright (C) 2009 SYLEAM Info Services ([http://www.syleam.fr/]) Christophe CHAUVET
+        #    Copyright (C) 2013-2016 Mirounga ([http://mirounga.fr/]) 
+        #                            Christophe CHAUVET (christophe.chauvet@gmail.com)
         #
-        #    This file is a part of jasper_server
+        #    This file is a part of jasper_connector
         #
-        #    jasper_server is free software: you can redistribute it and/or modify
+        #    jasper_connector is free software: you can redistribute it and/or modify
         #    it under the terms of the GNU General Public License as published by
         #    the Free Software Foundation, either version 3 of the License, or
         #    (at your option) any later version.
         #
-        #    jasper_server is distributed in the hope that it will be useful,
+        #    jasper_connector is distributed in the hope that it will be useful,
         #    but WITHOUT ANY WARRANTY; without even the implied warranty of
         #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         #    GNU General Public License for more details.
@@ -23,16 +25,10 @@
         #
         ##############################################################################
 
-        <menuitem id="menu_jasper"
-            icon="STOCK_PRINT" 
-            sequence="50" 
-            name="Jasper Report" 
-            parent="base.menu_custom"/>
-
         #
         # Jasper Server configuration
         #
-        <record id="view_jasper_server_tree" model="ir.ui.view">
+        <record id="view_jasper_connector_tree" model="ir.ui.view">
             <field name="name">jasper.server.tree</field>
             <field name="model">jasper.server</field>
             <field name="priority" eval="8"/>
@@ -50,7 +46,7 @@
             </field>
         </record> 
 
-        <record id="view_jasper_server_form" model="ir.ui.view">
+        <record id="view_jasper_connector_form" model="ir.ui.view">
             <field name="name">jasper.server.form</field>
             <field name="model">jasper.server</field>
             <field name="priority" eval="8"/>
@@ -92,8 +88,8 @@
             </field>
         </record>
 
-        <record model="ir.actions.act_window" id="action_jasper_server">
-            <field name="name">Jasper Server configuration</field>
+        <record model="ir.actions.act_window" id="action_jasper_connector">
+            <field name="name">Server configuration</field>
             <field name="res_model">jasper.server</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
@@ -101,10 +97,10 @@
             <field name="context">{}</field>
         </record>
 
-        <menuitem id="menu_jasper_server"
-            action="action_jasper_server"
-            icon="STOCK_PREFERENCES"
-            parent="menu_jasper"/>
+        <menuitem id="menu_jasper_connector"
+            action="action_jasper_connector"
+            sequence="50"
+            parent="menu_jasper_conn"/>
 
 
     </data>

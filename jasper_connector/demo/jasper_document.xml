@@ -3,17 +3,17 @@
     <data>
         ##############################################################################
         #
-        #    jasper_server module for OpenERP, 
+        #    jasper_connector module for OpenERP, 
         #    Copyright (C) 2010 SYLEAM Info Services ([http://www.Syleam.fr/]) Damien CRIER
         #
-        #    This file is a part of jasper_server
+        #    This file is a part of jasper_connector
         #
-        #    jasper_server is free software: you can redistribute it and/or modify
+        #    jasper_connector is free software: you can redistribute it and/or modify
         #    it under the terms of the GNU General Public License as published by
         #    the Free Software Foundation, either version 3 of the License, or
         #    (at your option) any later version.
         #
-        #    jasper_server is distributed in the hope that it will be useful,
+        #    jasper_connector is distributed in the hope that it will be useful,
         #    but WITHOUT ANY WARRANTY; without even the implied warranty of
         #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         #    GNU General Public License for more details.
@@ -24,7 +24,7 @@
         ##############################################################################
 
         <!-- Add local server, by default at 8080 port -->
-        <record id="jasper_server_1" model="jasper.server">
+        <record id="jasper_connector_1" model="jasper.server">
             <field name="host">localhost</field>
             <field name="port">8080</field>
             <field name="user">jasperadmin</field>
@@ -36,7 +36,7 @@
         <record model="jasper.document" id="jasper_document_4">
             <field name="name">Partner's List</field>
             <field name="depth">2</field>
-            <field name="jasper_file">jasper_server/demo/partner_list.jrxml</field>
+            <field name="jasper_file">jasper_connector/demo/partner_list.jrxml</field>
             <field name="format_choice">mono</field>
             <field name="model_id" ref="base.model_res_partner"/>
             <field name="enabled" eval="1"/>
