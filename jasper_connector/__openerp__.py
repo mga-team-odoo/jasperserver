@@ -63,11 +63,11 @@ In collaboration with Eric Vernichon (from Everlibre)
         'security/ir.model.access.csv',
         'views/base.xml',
         'data/jasper_document_extension.xml',
+        'wizard/wizard.xml',
+        'wizard/load_file_view.xml',
         'views/server.xml',
         'views/document.xml',
         'views/base_view.xml',
-        'wizard/wizard.xml',
-        'wizard/load_file_view.xml',
     ],
     'demo': [
         'demo/jasper_document.xml',
