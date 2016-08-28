@@ -1,578 +1,56 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * jasper_connector
-# Christophe CHAUVET <christophe.chauvet@gmail.com>, 2015.
+# 
+# Translators:
+# Mirounga Bot <mgabot@mirounga.net>, 2016
+# Christophe CHAUVET <christophe.chauvet@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-02 13:30+0000\n"
-"PO-Revision-Date: 2015-02-02 14:35+0200\n"
-"Last-Translator: Christophe CHAUVET <christophe.chauvet@gmail.com>\n"
-"Language-Team: Mirounga\n"
-"Language: fr\n"
+"POT-Creation-Date: 2016-08-28 19:58+0000\n"
+"PO-Revision-Date: 2016-08-28 19:58+0000\n"
+"Last-Translator: Christophe CHAUVET <christophe.chauvet@gmail.com>, 2016\n"
+"Language-Team: French (https://www.transifex.com/mga-team-odoo/teams/66407/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
-"X-Launchpad-Export-Date: 2013-01-26 05:24+0000\n"
 
 #. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:135
-#: code:addons/jasper_connector/report/report_soap.py:139
-#: code:addons/jasper_connector/report/report_soap.py:143
-#: code:addons/jasper_connector/report/report_soap.py:147
-#, python-format
-msgid "Field Eval Error"
-msgstr "Erreur d'évaluation du champ"
-
-#. module: jasper_connector
-#: help:jasper.document,pdf_ended:0
-msgid "Name of the PDF file store as attachment to add at the last page (page number not recompute)"
-msgstr ""
-"Nom du fichier PDF stocké comme pièce jointe pour ajouter la dernière page ("
-"la numérotation des pages n'est pas recalculé)"
-
-#. module: jasper_connector
-#: field:jasper.document,model_id:0
-msgid "Object Model"
-msgstr "Objet"
-
-#. module: jasper_connector
-#: help:jasper.document,pdf_begin:0
-msgid "Name of the PDF file store as attachment to add at the first page (page number not recompute)"
-msgstr ""
-"Nom du fichier PDF stocké comme pièce jointe pour l'ajouter en première page "
-"(la numérotation des pages n'est pas recalculé)"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:208
-#: code:addons/jasper_connector/report/report_soap.py:211
-#: code:addons/jasper_connector/report/report_soap.py:214
-#: code:addons/jasper_connector/report/report_soap.py:217
-#, python-format
-msgid "Language Error"
-msgstr "Erreur de langue"
-
-#. module: jasper_connector
-#: help:jasper.document,after:0
-msgid "This field must be filled with a valid SQL request and will be executed AFTER the report edition"
-msgstr ""
-"Ce champ doit être remplit avec une requête SQL valide et sera exécuté APRÈS "
-"le rapport d'édition"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/obj_document.py:381
-#: code:addons/jasper_connector/obj_document.py:399
-#: code:addons/jasper_connector/obj_document.py:403
-#: code:addons/jasper_connector/obj_document.py:407
-#: code:addons/jasper_connector/report/report_soap.py:413
-#: code:addons/jasper_connector/report/report_soap.py:415
-#: code:addons/jasper_connector/wizard/format_choice.py:63
-#: code:addons/jasper_connector/wizard/format_choice.py:70
-#: code:addons/jasper_connector/wizard/format_choice.py:83
-#, python-format
-msgid "Error"
-msgstr "Erreur"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:140
-#, python-format
-msgid "Error when evaluate field\n"
-"\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur lors de l'évaluation du champ\n"
-"\n"
-"Message: \"%s\""
-
-#. module: jasper_connector
-#: view:jasper.document.parameter:0
-msgid "u: for current user (user launched the report)"
-msgstr "u: pour l'utilisateur courant (utilisateur qui a lancé lédition)"
-
-#. module: jasper_connector
-#: model:ir.model,name:jasper_connector.model_ir_actions_wizard
-msgid "ir.actions.wizard"
-msgstr "ir.actions.wizard"
-
-#. module: jasper_connector
-#: field:jasper.document.label,document_id:0
-#: field:jasper.document.parameter,document_id:0
-msgid "Document"
-msgstr "Document"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:271
-#, python-format
-msgid "Syntax error when check condition\n"
-"\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur de syntaxe lors de la vérification de condition\n"
-"\n"
-"Message: \"%s\""
-
-#. module: jasper_connector
-#: help:jasper.server,repo:0
-msgid "Enter the address of the repository"
-msgstr "Entrer l'adresse du dépôt"
-
-#. module: jasper_connector
-#: help:jasper.document,child_ids:0
-msgid "Select reports to launch when this report is called"
-msgstr "Sélectionner le rapport à lancer lorsque ce rapport est appelé"
-
-#. module: jasper_connector
-#: model:ir.actions.act_window,name:jasper_connector.act_open_document_extension_view
-#: model:ir.model,name:jasper_connector.model_jasper_document_extension
-#: model:ir.ui.menu,name:jasper_connector.menu_jasper_document_extension
-msgid "Jasper Document Extension"
-msgstr "Extension des documents jasper"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/obj_document.py:400
-#, python-format
-msgid "Error, server not found %s %d"
-msgstr "Erreur, le serveur n'a pas été trouvé pour %s %d"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:214
-#, python-format
-msgid "Attribute error when evaluate language\n"
-"Verify if specify field exists and valid\n"
-"\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur d'attribut lors de l'évaluation de la langue\n"
-"Vérifier si le champ spécifié existe et est valide\n"
-"\n"
-"Message: \"%s\""
-
-#. module: jasper_connector
-#: help:jasper.document,before:0
-msgid "This field must be filled with a valid SQL request and will be executed BEFORE the report edition"
-msgstr ""
-"Ce champ doit être remplit avec une requête SQL valide et sera exécuté AVANT "
-"le rapport d'édition"
-
-#. module: jasper_connector
-#: field:jasper.server,host:0
-msgid "Host"
-msgstr "Hôte"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-#: field:jasper.document,sql_view:0
-msgid "SQL View"
-msgstr "Vue SQL"
-
-#. module: jasper_connector
-#: help:jasper.document,attachment_use:0
-msgid "If you check this, then the second time the user prints with same attachment name, it returns the previous report."
-msgstr ""
-"Si vous cochez ceci, alors la seconde fois que l'utilisateur imprimera avec "
-"le même nom de pièce jointe, cela retournera le rapport stocké"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-#: view:jasper.document.label:0
-#: view:jasper.document.parameter:0
-msgid "Legend"
-msgstr "Légende"
-
-#. module: jasper_connector
-#: help:jasper.document.parameter,code:0
-msgid "Enter the code to retrieve data"
-msgstr "Entrer le code pour récupérer la donnée, voir la légende"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:148
-#, python-format
-msgid "Unknown error when evaluate field\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur inconnu lors de l'évaluation du champ\n"
-"Méssage: \"%s\""
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:168
-#, python-format
-msgid "Attribute error when evaluate attachment\n"
-"Verify if specify field exists and valid\n"
-"\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur d'attribut lors de l'évaluation de la pièce jointe\n"
-"Vérifier que le champ existe et est valide\n"
-"\n"
-"Message: \"%s\""
-
-#. module: jasper_connector
-#: view:jasper.document.parameter:0
-msgid "Use [[ o.name ]] to called browse object, see below for possibility"
-msgstr ""
-"Utiliser [[ o.name ]] pour appeller la methode browse de l'objet, voir ci "
-"dessous pour les possibilités"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/obj_server.py:173
-#, python-format
-msgid "Error, JasperServer not found at %s (port: %d)"
-msgstr "Erreur, JasperServer non trouvé à %s (port: %d)"
-
-#. module: jasper_connector
-#: view:jasper.server:0
-msgid "Check Auth"
-msgstr "Vérifier l'authentification"
-
-#. module: jasper_connector
-#: view:jasper.document.parameter:0
-msgid "c: for user s company"
-msgstr "c: pour la companie de l'utilisateur"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:217
-#, python-format
-msgid "Unknown error when evaluate language\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur inconnu lors de l'évaluation de la langue\n"
-"Message:\"%s\""
-
-#. module: jasper_connector
-#: field:jasper.document.label,value:0
-msgid "Value"
-msgstr "Valeur"
-
-#. module: jasper_connector
-#: help:jasper.server,prefix:0
-msgid "If prefix is filled, the reportUnit must in the new tree, usefull on a share hosting"
-msgstr ""
-"Si le préfix est rempli, le reportUnit sera dans une nouvelle arborescence, "
-"très utile en environnement mutualisé"
-
-#. module: jasper_connector
-#: help:jasper.document,message_simple:0
-msgid "Error message when check simple doesn't valid"
-msgstr "Message d'erreur lors de la vérification simplifiée n'est pas valide"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-msgid "Enter the name of the view"
-msgstr "Entrer le nom de la vue"
-
-#. module: jasper_connector
-#: model:ir.actions.act_window,name:jasper_connector.action_jasper_connector
-#: model:ir.ui.menu,name:jasper_connector.menu_jasper_connector
-msgid "Jasper Server configuration"
-msgstr "Configuration JasperServer"
-
-#. module: jasper_connector
-#: help:jasper.server,user:0
-msgid "Enter the username for JasperServer user, by default is jasperadmin"
-msgstr ""
-"Entrer le nom de l'utilisateur JasperServer, par défaut c'est jasperadmin"
-
-#. module: jasper_connector
-#: help:jasper.document,ctx:0
-msgid "Enter condition with context does match to see the print action\n"
-"eg: context.get('foo') == 'bar'"
-msgstr ""
-"Entrer la condition pour laquelle le contexte doit correspondre\n"
-"ex: context.get('foo') == 'bar'"
-
-#. module: jasper_connector
-#: selection:jasper.document,check_sel:0
-msgid "Simple"
-msgstr "Simplifié"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-#: field:jasper.document,label_ids:0
-msgid "Labels"
-msgstr "Libellés"
-
-#. module: jasper_connector
-#: view:jasper.document.extension:0
-msgid "Documents extensions"
-msgstr "Extensions des documents"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/obj_server.py:178
-#, python-format
-msgid "Error, JasperServer authentification failed for user %s/%s"
-msgstr ""
-"Erreur, l'authentification JasperServer à échoué pour l'utilisateur %s/%s"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/wizard/format_choice.py:63
-#: code:addons/jasper_connector/wizard/format_choice.py:83
-#, python-format
-msgid "No report found!"
-msgstr "Pas de rapport trouvé!"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:267
-#, python-format
-msgid "Function \"check_print\" return an error"
-msgstr "La fonction \"check_print\" retourne une erreur"
-
-#. module: jasper_connector
-#: field:ir.actions.wizard,jasper:0
-msgid "Jasper"
-msgstr "Jasper"
-
-#. module: jasper_connector
-#: selection:jasper.document,mode:0
-msgid "SQL"
-msgstr "SQL"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/obj_document.py:349
+#: code:addons/jasper_connector/models/document.py:339
 #, python-format
 msgid " (copy)"
 msgstr " (copie)"
 
 #. module: jasper_connector
-#: view:jasper.document:0
-msgid "Select report to launch when this report is launched"
-msgstr "Sélectionner les rapports à lancer lorsque le rapport est lancé"
+#: model:jasper.document.label,value:jasper_connector.i18N_title
+msgid "\"Partners and contacts information\""
+msgstr "Information partenaires et contacts"
 
 #. module: jasper_connector
-#: field:jasper.document,before:0
-msgid "Before"
-msgstr "Avant"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-msgid "Documents"
-msgstr "Éditions"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:211
+#: code:addons/jasper_connector/report/report_soap.py:266
 #, python-format
-msgid "Error when evaluate language\n"
-"\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur lors de l'évaluation de la langue\n"
-"\n"
-"Message: \"%s\""
+msgid "\"check_print\" function not found in \"%s\" object"
+msgstr "La fonction \"check_print\" non trouvé sur l'objet \"%s\""
 
 #. module: jasper_connector
-#: view:jasper.document:0
-#: field:jasper.document,param_ids:0
-msgid "Parameters"
-msgstr "Paramètres"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/wizard/format_choice.py:71
-#, python-format
-msgid "No implemented yet!"
-msgstr "Pas encore implémenté!"
-
-#. module: jasper_connector
-#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_2
-msgid "PDF Viewer"
-msgstr "Visionneuse PDF"
-
-#. module: jasper_connector
-#: help:jasper.server,enable:0
-msgid "Check this, if the server is available"
-msgstr "Cochez ceci, si le serveur est disponible"
-
-#. module: jasper_connector
-#: view:jasper.document.label:0
-msgid "Label"
-msgstr "Libellé"
-
-#. module: jasper_connector
-#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_4
-msgid "Microsoft® Word 2007"
-msgstr "Microsoft® Word 2007"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-msgid "PDF Merge"
-msgstr "Fusion de PDF"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:415
-#, python-format
-msgid "Autentification failed !"
-msgstr "L'authentification a échoué!"
-
-#. module: jasper_connector
-#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_1
-msgid "OpenOffice Writer"
-msgstr "OpenOffice Writer"
-
-#. module: jasper_connector
-#: field:jasper.document.label,name:0
-#: view:jasper.document.parameter:0
-msgid "Parameter"
-msgstr "Paramètre"
-
-#. module: jasper_connector
-#: view:jasper.server:0
-msgid "Check and Authentification status"
-msgstr "Etat de vérification et identification"
-
-#. module: jasper_connector
-#: field:jasper.server,user:0
-msgid "Username"
-msgstr "Identifiant"
-
-#. module: jasper_connector
-#: view:jasper.server:0
-#: field:jasper.server,enable:0
-msgid "Enable"
-msgstr "Activé"
-
-#. module: jasper_connector
-#: field:jasper.document,child_ids:0
-msgid "Child report"
-msgstr "Rapport enfant"
-
-#. module: jasper_connector
-#: help:jasper.document.parameter,name:0
-msgid "Name of the jasper parameter, the prefix must be OERP_"
-msgstr "Nom du paramètre jasper, le préfixe sera OERP_"
-
-#. module: jasper_connector
-#: model:ir.ui.menu,name:jasper_connector.menu_jasper_document
-msgid "Jasper Reports"
-msgstr "Jasper Reports"
-
-#. module: jasper_connector
-#: model:ir.model,name:jasper_connector.model_load_jrxml_file
-msgid "Load file in the jasperdocument"
-msgstr "Chargement d'un document jasper"
-
-#. module: jasper_connector
-#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_8
-msgid "Rich Text Format"
-msgstr "Format Texte Enrichi"
-
-#. module: jasper_connector
-#: view:jasper.server:0
-msgid "eg: localhost or 127.0.0.1"
-msgstr "ex: localhost ou 127.0.0.1"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:258
-#: code:addons/jasper_connector/report/report_soap.py:261
-#: code:addons/jasper_connector/report/report_soap.py:267
-#, python-format
-msgid "Check Print Error"
-msgstr "Erreur en vérification d'impression"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:208
-#, python-format
-msgid "Syntax error when evaluate language\n"
-"\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur de syntaxe lors de l'évaluation de la langue\n"
-"\n"
-"Message: \"%s\""
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:136
-#, python-format
-msgid "Syntax error when evaluate field\n"
-"\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur de syntaxe lors de l'évaluation du champ\n"
-"\n"
-"Message: \"%s\""
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:315
-#, python-format
-msgid "No report name"
-msgstr "Pas de nom de rapport"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:274
-#, python-format
-msgid "Error when check condition\n"
-"\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur lors de la vérification de la condition\n"
-"\n"
-"Message: \"%s\""
-
-#. module: jasper_connector
-#: view:jasper.document:0
-msgid "Blocking"
-msgstr "Blocage"
-
-#. module: jasper_connector
-#: view:jasper.document:0
+#: view:jasper.document:jasper_connector.view_document_form
 msgid "%(id)s"
 msgstr "%(id)s"
 
 #. module: jasper_connector
-#: selection:jasper.document,check_sel:0
-msgid "None"
-msgstr "Aucune"
+#: model:ir.model,name:jasper_connector.model_res_groups
+msgid "Access Groups"
+msgstr "Groupes d'accès"
 
 #. module: jasper_connector
-#: model:ir.model,name:jasper_connector.model_jasper_connector
-msgid "Jasper server configuration"
-msgstr "Configuration JasperServer"
-
-#. module: jasper_connector
-#: field:jasper.document.extension,extension:0
-msgid "Extension"
-msgstr "Extension"
-
-#. module: jasper_connector
-#: help:jasper.document,attachment:0
-msgid "This is the filename of the attachment used to store the printing result. Keep empty to not save the printed reports. You can use a python expression with the object and time variables."
-msgstr ""
-"Ceci est le nom de la pièce jointe utiliser pour le stockage de l'impression "
-"produite, Laisser vide pour ne pas sauvegarder le rapport imprimé. Vous "
-"pouvez utiliser une expression python avec object et time comme variables."
-
-#. module: jasper_connector
-#: help:jasper.document,sequence:0
-msgid "The sequence is used when launch a multple report, to select the order to launch"
-msgstr ""
-"La séquence est utilisé lorsque de multiple rapport sont lancés, pour "
-"sélectionner l'ordre à lancer"
-
-#. module: jasper_connector
-#: field:jasper.document,server_id:0
-msgid "Server"
-msgstr "Serveur"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:453
-#: code:addons/jasper_connector/report/report_soap.py:467
-#, python-format
-msgid "Configuration Error"
-msgstr "Erreur de configuration"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:182
-#: code:addons/jasper_connector/report/report_soap.py:186
-#: code:addons/jasper_connector/report/report_soap.py:190
-#: code:addons/jasper_connector/report/report_soap.py:194
-#, python-format
-msgid "Duplicate Error"
-msgstr "Erreur de duplication"
-
-#. module: jasper_connector
-#: field:jasper.document,message_simple:0
-msgid "Return message"
-msgstr "Message de retour"
+#: view:jasper.document:jasper_connector.view_document_form
+#: field:jasper.document,enabled:0
+msgid "Active"
+msgstr "Actif"
 
 #. module: jasper_connector
 #: model:ir.model,name:jasper_connector.model_jasper_document_parameter
@@ -580,219 +58,37 @@ msgid "Add parameter to send to jasper server"
 msgstr "Ajouter des paramètres à envoyer à Jasper Server"
 
 #. module: jasper_connector
-#: view:jasper.document.parameter:0
-msgid "o: for object"
-msgstr "o: pour l'objet en cours"
+#: field:jasper.document,after:0
+msgid "After"
+msgstr "Après"
 
 #. module: jasper_connector
-#: view:jasper.document:0
-msgid "Execute SQL query before treatment"
-msgstr "Exécuter un requête SQL avant le traitement"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:187
-#, python-format
-msgid "Error when evaluate duplicate\n"
-"\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur lors de l'évaluation du nombre de copie\n"
-"\n"
-"Message \"%s\""
-
-#. module: jasper_connector
-#: field:jasper.document,pdf_begin:0
-msgid "PDF at begin"
-msgstr "PDF en page de début"
-
-#. module: jasper_connector
-#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_9
-msgid "Flash Viewer"
-msgstr "Visionneuse Flash"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-msgid "Group by..."
-msgstr "Regrouper par..."
-
-#. module: jasper_connector
-#: model:ir.model,name:jasper_connector.model_jasper_document_label
-msgid "Manage label in document, for different language"
-msgstr "Gestion des libellés de document, pour les différentes langues"
-
-#. module: jasper_connector
-#: field:jasper.document,check_sel:0
-msgid "Checking type"
-msgstr "Type de vérification"
-
-#. module: jasper_connector
-#: view:jasper.document.label:0
-msgid "All label are pass as parameter to the JasperServer, and start with I18N_"
+#: view:jasper.document.label:jasper_connector.view_jasper_document_label_form
+msgid ""
+"All label are pass as parameter to the JasperServer, and start with I18N_"
 msgstr ""
 "Tous les libellés sont passés comme paramètres à JasperServer, et commence "
 "par I18N_"
 
 #. module: jasper_connector
-#: view:jasper.document:0
-msgid "Import JRXML"
-msgstr "Importer un JRXML"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:413
-#, python-format
-msgid "Server not found !"
-msgstr "Serveur non trouvé !"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-msgid "Check report"
-msgstr "Vérifier le rapport"
-
-#. module: jasper_connector
-#: help:jasper.server,status:0
-msgid "Check the registered and authentification status"
-msgstr "Vérifie l'enregistrement et l'état de l'authentification"
-
-#. module: jasper_connector
-#: model:ir.model,name:jasper_connector.model_ir_actions_report_xml
-msgid "ir.actions.report.xml"
-msgstr "ir.actions.report.xml"
-
-#. module: jasper_connector
-#: help:load.jrxml.file,datafile:0
-msgid "Select file to transfert"
-msgstr "Sélectionner un fichier a transférer"
-
-#. module: jasper_connector
-#: model:ir.model,name:jasper_connector.model_jasper_document
-#: view:jasper.document:0
-msgid "Jasper Document"
-msgstr "Document Jasper"
-
-#. module: jasper_connector
-#: model:ir.actions.act_window,name:jasper_connector.act_open_document_view
-#: model:ir.ui.menu,name:jasper_connector.menu_jasper
-msgid "Jasper Report"
-msgstr "Jasper Report"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/obj_document.py:382
-#, python-format
-msgid "No JasperServer configuration found !"
-msgstr "Pas de configuration JasperServer trouvée !"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:454
-#, python-format
-msgid "Service name doesn't match!"
-msgstr "Le nom de service ne correspond pas!"
-
-#. module: jasper_connector
-#: model:res.groups,name:jasper_connector.group_jasper_user
-msgid "Jasper / User"
-msgstr "Jasper / Utilisateur"
-
-#. module: jasper_connector
-#: field:jasper.document,duplicate:0
-msgid "Duplicate"
-msgstr "Nombre d'exemplaires"
-
-#. module: jasper_connector
-#: field:jasper.document,sql_name:0
-msgid "Name of view"
-msgstr "Nom de la vue"
-
-#. module: jasper_connector
-#: view:jasper.document:0
+#: view:jasper.document:jasper_connector.view_document_form
 msgid "Attachment"
 msgstr "Pièce jointe"
 
 #. module: jasper_connector
-#: view:jasper.document:0
-msgid "Model"
-msgstr "Modèle"
-
-#. module: jasper_connector
-#: field:jasper.server,status:0
-msgid "Status"
-msgstr "État"
-
-#. module: jasper_connector
-#: field:jasper.document,only_one:0
-msgid "Launch one time for all ids"
-msgstr "Lancer une fois pour tous les IDS"
-
-#. module: jasper_connector
-#: view:jasper.document.label:0
-msgid "These parameters are translate in the language define in the general tab"
-msgstr ""
-"Ces paramètres seront traduis dans la langue définit dans l'onglet Général"
-
-#. module: jasper_connector
-#: field:jasper.server,repo:0
-msgid "Repository"
-msgstr "Dépôt"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:195
+#: code:addons/jasper_connector/report/report_soap.py:164
+#: code:addons/jasper_connector/report/report_soap.py:168
+#: code:addons/jasper_connector/report/report_soap.py:172
+#: code:addons/jasper_connector/report/report_soap.py:176
 #, python-format
-msgid "Unknown error when evaluate duplicate\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur inconnu lors de l'évaluation du nombre de copie\n"
-"Message: \"%s\""
+msgid "Attachment Error"
+msgstr "Erreur de pièce jointe"
 
 #. module: jasper_connector
-#: help:jasper.server,pass:0
-msgid "Enter the password for the user, by defaul is jasperadmin"
-msgstr "Entrer le mot de passe pour l'utilisateur, par défaut c'est jasperadmin"
-
-#. module: jasper_connector
-#: help:jasper.server,host:0
-msgid "Enter hostname or IP address"
-msgstr "Entrer l'hôte ou l'adresse IP"
-
-#. module: jasper_connector
-#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_7
-msgid "Text Editor"
-msgstr "Editeur de texte"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-#: field:jasper.document,group_ids:0
-msgid "Groups"
-msgstr "Groups"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-#: field:jasper.document,enabled:0
-msgid "Active"
-msgstr "Actif"
-
-#. module: jasper_connector
-#: field:jasper.document,jasper_file:0
-msgid "Jasper file"
-msgstr "Fichier Jasper"
-
-#. module: jasper_connector
-#: field:jasper.document,lang:0
-msgid "Lang"
-msgstr "Langue"
-
-#. module: jasper_connector
-#: help:jasper.document,check_sel:0
-msgid "if None, no check\n"
-"if Simple, define on Check Simple the condition\n"
-" if function, the object have check_print function"
-msgstr ""
-"Si Aucune, pas de vérification\n"
-"Si Simplifié, définir la condition dans Vérification simplifiée\n"
-"Si Fonction, l'objet doit avoir une fonction check_print"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:277
+#: code:addons/jasper_connector/report/report_soap.py:282
 #, python-format
-msgid "Attribute error when check condition\n"
+msgid ""
+"Attribute error when check condition\n"
 "Verify if specify field exists and valid\n"
 "\n"
 "Message: \"%s\""
@@ -803,176 +99,24 @@ msgstr ""
 "Message: \"%s\""
 
 #. module: jasper_connector
-#: help:jasper.document,only_one:0
-msgid "Launch the report only one time on multiple id"
-msgstr "Lancer le rapport une seule fois sur de multiple ID"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-msgid "Reports"
-msgstr "Rapports"
-
-#. module: jasper_connector
-#: field:jasper.document,attachment:0
-msgid "Save As Attachment Prefix"
-msgstr "Sauvegarder comme préfixe de pièce jointe"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-#: field:jasper.document.parameter,enabled:0
-msgid "Enabled"
-msgstr "Activé"
-
-#. module: jasper_connector
-#: model:ir.module.category,name:jasper_connector.module_category_reporting_jasperserver
-msgid "JasperReport"
-msgstr "JasperReport"
-
-#. module: jasper_connector
-#: help:jasper.document,report_id:0
-msgid "Link to the report in ir.actions.report.xml"
-msgstr "Lien vers le rapport dans ir.actions.report.xml"
-
-#. module: jasper_connector
-#: field:jasper.document,format:0
-msgid "Formats"
-msgstr "Formats"
-
-#. module: jasper_connector
-#: help:jasper.document.label,value:0
-msgid "Name of the label, this field must be translate in all languages available in the database"
-msgstr ""
-"Nom du libellé, ce champ sera traduit dans toutes les langues disponible "
-"dans la base de données"
-
-#. module: jasper_connector
-#: model:res.groups,name:jasper_connector.group_jasper_manager
-msgid "Jasper / Manager"
-msgstr "Jasper / Responsable"
-
-#. module: jasper_connector
-#: view:load.jrxml.file:0
-msgid "Next"
-msgstr "Suivant"
-
-#. module: jasper_connector
-#: selection:jasper.document,format_choice:0
-msgid "Single Format"
-msgstr "Format unique"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:468
+#: code:addons/jasper_connector/report/report_soap.py:173
 #, python-format
-msgid "No JasperServer configuration found!"
-msgstr "Pas de configuration du JasperServer trouvée!"
-
-#. module: jasper_connector
-#: help:jasper.document,lang:0
-msgid "Indicate the lang to use for this report, use'                             'o as object to evaluate\n"
-"eg: o.partner_id.lang\n"
-"'                             'ctx as context\n"
-"eg: ctx.get('test'\\)\n"
-"'                             'or\n"
-"'fr_FR'\n"
-"default use user's lang"
-msgstr ""
-
-#. module: jasper_connector
-#: field:jasper.document.extension,jasper_code:0
-#: field:jasper.document.parameter,code:0
-msgid "Code"
-msgstr "Code"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/obj_document.py:404
-#, python-format
-msgid "Error, Authentification failed for %s/%s"
-msgstr "Erreur, l'authentification à échoué pour %s/%s"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:144
-#, python-format
-msgid "Attribute error when evaluate field\n"
+msgid ""
+"Attribute error when evaluate attachment\n"
 "Verify if specify field exists and valid\n"
 "\n"
 "Message: \"%s\""
 msgstr ""
-"Erreur d'attribut lors de l'évaluation du champ\n"
-"Vérifier si el champ existe et valide\n"
+"Erreur d'attribut lors de l'évaluation de la pièce jointe\n"
+"Vérifier que le champ existe et est valide\n"
 "\n"
 "Message: \"%s\""
 
 #. module: jasper_connector
-#: selection:jasper.document,mode:0
-msgid "Multiple Report"
-msgstr "Rapport multiple"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-msgid "General"
-msgstr "Général"
-
-#. module: jasper_connector
-#: field:jasper.server,prefix:0
-msgid "Prefix"
-msgstr "Préfixe"
-
-#. module: jasper_connector
-#: field:jasper.document,format_choice:0
-msgid "Format Choice"
-msgstr "Choix du format"
-
-#. module: jasper_connector
-#: view:load.jrxml.file:0
-msgid "Cancel"
-msgstr "Annuler"
-
-#. module: jasper_connector
-#: view:jasper.document.extension:0
-msgid "Document extensions"
-msgstr "Extensions des documents"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-#: selection:jasper.document,mode:0
-msgid "XML"
-msgstr "XML"
-
-#. module: jasper_connector
-#: view:jasper.server:0
-msgid "Jasper Server"
-msgstr "Jasper Server"
-
-#. module: jasper_connector
-#: field:jasper.document,check_simple:0
-msgid "Check Simple"
-msgstr "Vérification simplifée"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:160
+#: code:addons/jasper_connector/report/report_soap.py:196
 #, python-format
-msgid "Syntax error when evaluate attachment\n"
-"\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur de syntaxe lors de l'évaluation de la pièce jointe\n"
-"\n"
-"Message: \"%s\""
-
-#. module: jasper_connector
-#: view:jasper.document:0
-msgid "Processes"
-msgstr "Processus"
-
-#. module: jasper_connector
-#: view:jasper.server:0
-msgid "eg: 8080"
-msgstr "ex: 8080"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:191
-#, python-format
-msgid "Attribute error when evaluate duplicate\n"
+msgid ""
+"Attribute error when evaluate duplicate\n"
 "Verify if specify field exists and valid\n"
 "\n"
 "Message: \"%s\""
@@ -983,81 +127,263 @@ msgstr ""
 "Message: \"%s\""
 
 #. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:271
-#: code:addons/jasper_connector/report/report_soap.py:274
-#: code:addons/jasper_connector/report/report_soap.py:277
-#: code:addons/jasper_connector/report/report_soap.py:283
+#: code:addons/jasper_connector/report/report_soap.py:149
+#, python-format
+msgid ""
+"Attribute error when evaluate field\n"
+"Verify if specify field exists and valid\n"
+"\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur d'attribut lors de l'évaluation du champ\n"
+"Vérifier si el champ existe et valide\n"
+"\n"
+"Message: \"%s\""
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:219
+#, python-format
+msgid ""
+"Attribute error when evaluate language\n"
+"Verify if specify field exists and valid\n"
+"\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur d'attribut lors de l'évaluation de la langue\n"
+"Vérifier si le champ spécifié existe et est valide\n"
+"\n"
+"Message: \"%s\""
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:438
+#, python-format
+msgid "Autentification failed !"
+msgstr "L'authentification a échoué!"
+
+#. module: jasper_connector
+#: field:jasper.document,before:0
+msgid "Before"
+msgstr "Avant"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "Blocking"
+msgstr "Blocage"
+
+#. module: jasper_connector
+#: view:jasper.server:jasper_connector.view_jasper_connector_form
+msgid "By default the password is jasperadmin"
+msgstr "Par défaut le mot de passe est jasperadmin"
+
+#. module: jasper_connector
+#: view:jasper.server:jasper_connector.view_jasper_connector_form
+msgid "By default user is jasperadmin"
+msgstr "Par défaut l'utilisateur est jasperadmin"
+
+#. module: jasper_connector
+#: view:load.jrxml.file:jasper_connector.view_load_jrxml_file_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: jasper_connector
+#: view:jasper.server:jasper_connector.view_jasper_connector_form
+msgid "Check Auth"
+msgstr "Vérifier l'authentification"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:276
+#: code:addons/jasper_connector/report/report_soap.py:279
+#: code:addons/jasper_connector/report/report_soap.py:282
+#: code:addons/jasper_connector/report/report_soap.py:288
 #, python-format
 msgid "Check Error"
 msgstr "Erreur de vérification"
 
 #. module: jasper_connector
-#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_6
-msgid "Microsoft® Excel (97 -> 2003)"
-msgstr "Microsoft® Excel (97 -> 2003)"
-
-#. module: jasper_connector
-#: field:jasper.document,report_unit:0
-msgid "Report Unit"
-msgstr "Report Unit"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:183
+#: code:addons/jasper_connector/report/report_soap.py:263
+#: code:addons/jasper_connector/report/report_soap.py:266
+#: code:addons/jasper_connector/report/report_soap.py:272
 #, python-format
-msgid "Syntax error when evaluate duplicate\n"
-"\n"
-"Message: \"%s\""
+msgid "Check Print Error"
+msgstr "Erreur en vérification d'impression"
+
+#. module: jasper_connector
+#: field:jasper.document,check_simple:0
+msgid "Check Simple"
+msgstr "Vérification simplifée"
+
+#. module: jasper_connector
+#: view:jasper.server:jasper_connector.view_jasper_connector_form
+msgid "Check and Authentification status"
+msgstr "Etat de vérification et identification"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "Check report"
+msgstr "Vérifier le rapport"
+
+#. module: jasper_connector
+#: help:jasper.server,status:0
+msgid "Check the registered and authentification status"
+msgstr "Vérifie l'enregistrement et l'état de l'authentification"
+
+#. module: jasper_connector
+#: help:jasper.server,enable:0
+msgid "Check this, if the server is available"
+msgstr "Cochez ceci, si le serveur est disponible"
+
+#. module: jasper_connector
+#: field:jasper.document,check_sel:0
+msgid "Checking type"
+msgstr "Type de vérification"
+
+#. module: jasper_connector
+#: field:jasper.document,child_ids:0
+msgid "Child report"
+msgstr "Rapport enfant"
+
+#. module: jasper_connector
+#: field:jasper.document.extension,jasper_code:0
+#: field:jasper.document.parameter,code:0
+msgid "Code"
+msgstr "Code"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "Condition to launch the printing report"
+msgstr "Condition à vérifier lors de l'impression du rapport"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:476
+#: code:addons/jasper_connector/report/report_soap.py:490
+#, python-format
+msgid "Configuration Error"
+msgstr "Erreur de configuration"
+
+#. module: jasper_connector
+#: field:jasper.document,ctx:0
+msgid "Context"
+msgstr "Contexte"
+
+#. module: jasper_connector
+#: field:jasper.document,create_uid:0
+#: field:jasper.document.extension,create_uid:0
+#: field:jasper.document.label,create_uid:0
+#: field:jasper.document.parameter,create_uid:0
+#: field:jasper.server,create_uid:0 field:load.jrxml.file,create_uid:0
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: jasper_connector
+#: field:jasper.document,create_date:0
+#: field:jasper.document.extension,create_date:0
+#: field:jasper.document.label,create_date:0
+#: field:jasper.document.parameter,create_date:0
+#: field:jasper.server,create_date:0 field:load.jrxml.file,create_date:0
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: jasper_connector
+#: help:res.groups,is_jasper:0
+msgid "Dedicate groups for JasperServer"
+msgstr "Groupes dédié au JasperServer"
+
+#. module: jasper_connector
+#: field:jasper.document,depth:0
+msgid "Depth"
+msgstr "Profondeur"
+
+#. module: jasper_connector
+#: field:jasper.document,display_name:0
+#: field:jasper.document.extension,display_name:0
+#: field:jasper.document.label,display_name:0
+#: field:jasper.document.parameter,display_name:0
+#: field:jasper.server,display_name:0 field:load.jrxml.file,display_name:0
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: jasper_connector
+#: field:jasper.document.label,document_id:0
+#: field:jasper.document.parameter,document_id:0
+msgid "Document"
+msgstr "Document"
+
+#. module: jasper_connector
+#: model:ir.actions.act_window,name:jasper_connector.act_open_document_extension_view
+#: model:ir.ui.menu,name:jasper_connector.menu_jasper_document_extension
+msgid "Document Extension"
+msgstr "Extension du document"
+
+#. module: jasper_connector
+#: view:jasper.document.extension:jasper_connector.view_document_extension_tree
+msgid "Document extensions"
+msgstr "Extensions des documents"
+
+#. module: jasper_connector
+#: model:ir.actions.act_window,name:jasper_connector.act_open_document_view
+msgid "Document report"
+msgstr "Édition - rapport"
+
+#. module: jasper_connector
+#: model:ir.ui.menu,name:jasper_connector.menu_jasper_document
+#: view:jasper.document:jasper_connector.view_document_search
+msgid "Documents"
+msgstr "Éditions"
+
+#. module: jasper_connector
+#: view:jasper.document.extension:jasper_connector.view_document_extension_form
+msgid "Documents extensions"
+msgstr "Extensions des documents"
+
+#. module: jasper_connector
+#: field:jasper.document,duplicate:0
+msgid "Duplicate"
+msgstr "Nombre d'exemplaires"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:187
+#: code:addons/jasper_connector/report/report_soap.py:191
+#: code:addons/jasper_connector/report/report_soap.py:195
+#: code:addons/jasper_connector/report/report_soap.py:199
+#, python-format
+msgid "Duplicate Error"
+msgstr "Erreur de duplication"
+
+#. module: jasper_connector
+#: view:jasper.server:jasper_connector.view_jasper_connector_form
+#: field:jasper.server,enable:0
+msgid "Enable"
+msgstr "Activé"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_search
+#: field:jasper.document.parameter,enabled:0
+msgid "Enabled"
+msgstr "Activé"
+
+#. module: jasper_connector
+#: help:jasper.document,ctx:0
+msgid ""
+"Enter condition with context does match to see the print action\n"
+"eg: context.get('foo') == 'bar'"
 msgstr ""
-"Erreur de syntaxe lors de l'évaluation du nombre de copie\n"
-"\n"
-"Message: \"%s\""
+"Entrer la condition pour laquelle le contexte doit correspondre\n"
+"ex: context.get('foo') == 'bar'"
 
 #. module: jasper_connector
-#: help:jasper.document,check_simple:0
-msgid "This code inside this field must return True to send report execution\n"
-"eg o.state in ('draft', 'open')"
-msgstr ""
-"Le code à l'intérieur de la fonction doit retourner True pour executer le "
-"rapport\n"
-"ex o.state in ('draft', 'open')"
+#: help:jasper.server,host:0
+msgid "Enter hostname or IP address"
+msgstr "Entrer l'hôte ou l'adresse IP"
 
 #. module: jasper_connector
-#: view:jasper.document:0
-msgid "Execute SQL query after treatment"
-msgstr "Exécuter un requête SQL après le traitement"
+#: help:jasper.server,repo:0
+msgid "Enter the address of the repository"
+msgstr "Entrer l'adresse du dépôt"
 
 #. module: jasper_connector
-#: view:jasper.server:0
-msgid "By default user is jasperadmin"
-msgstr "Par défaut l'utilisateur est jasperadmin"
-
-#. module: jasper_connector
-#: field:jasper.document,pdf_ended:0
-msgid "PDF at end"
-msgstr "PDF de page de fin"
-
-#. module: jasper_connector
-#: selection:jasper.document,check_sel:0
-msgid "Function"
-msgstr "Fonction"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-msgid "Format"
-msgstr "Format"
-
-#. module: jasper_connector
-#: field:jasper.document,after:0
-msgid "After"
-msgstr "Après"
-
-#. module: jasper_connector
-#: help:jasper.document.label,name:0
-msgid "Name of the parameter send to JasperServer, prefix with I18N_\n"
-"eg: test become I18N_TEST as parameter"
-msgstr ""
-"Nom du paramètre envoyé à JasperServer, préfixé par I18N_\n"
-"ex test devient I18N_TEST comme paramètre"
+#: help:jasper.document.parameter,code:0
+msgid "Enter the code to retrieve data"
+msgstr "Entrer le code pour récupérer la donnée, voir la légende"
 
 #. module: jasper_connector
 #: help:jasper.document,report_unit:0
@@ -1065,50 +391,267 @@ msgid "Enter the name for report unit in Jasper Server"
 msgstr "Entrer le nom du Report Unit dans Jasper Server"
 
 #. module: jasper_connector
-#: selection:jasper.document,format_choice:0
-msgid "Multi Format"
-msgstr "Format multiple"
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "Enter the name of the view"
+msgstr "Entrer le nom de la vue"
 
 #. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:261
-#, python-format
-msgid "\"check_print\" function not found in \"%s\" object"
-msgstr "La fonction \"check_print\" non trouvé sur l'objet \"%s\""
+#: help:jasper.server,pass:0
+msgid "Enter the password for the user, by defaul is jasperadmin"
+msgstr ""
+"Entrer le mot de passe pour l'utilisateur, par défaut c'est jasperadmin"
 
 #. module: jasper_connector
-#: field:jasper.server,pass:0
-msgid "Password"
-msgstr "Mot de passe"
-
-#. module: jasper_connector
-#: view:jasper.document:0
+#: view:jasper.document:jasper_connector.view_document_form
 msgid "Enter the select query of the view only"
 msgstr "Entrer la requête SELECT de la vue seulement"
 
 #. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:283
+#: help:jasper.server,user:0
+msgid "Enter the username for JasperServer user, by default is jasperadmin"
+msgstr ""
+"Entrer le nom de l'utilisateur JasperServer, par défaut c'est jasperadmin"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/models/document.py:372
+#: code:addons/jasper_connector/models/document.py:391
+#: code:addons/jasper_connector/models/document.py:395
+#: code:addons/jasper_connector/models/document.py:399
+#: code:addons/jasper_connector/report/report_soap.py:436
+#: code:addons/jasper_connector/report/report_soap.py:438
 #, python-format
-msgid "Unknown error when check condition\n"
+msgid "Error"
+msgstr "Erreur"
+
+#. module: jasper_connector
+#: help:jasper.document,message_simple:0
+msgid "Error message when check simple doesn't valid"
+msgstr "Message d'erreur lors de la vérification simplifiée n'est pas valide"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:279
+#, python-format
+msgid ""
+"Error when check condition\n"
+"\n"
 "Message: \"%s\""
 msgstr ""
-"Erreur inconnue lors de la vérification de condition\n"
+"Erreur lors de la vérification de la condition\n"
+"\n"
 "Message: \"%s\""
 
 #. module: jasper_connector
-#: field:jasper.document,name:0
-#: field:jasper.document.extension,name:0
-#: field:jasper.document.parameter,name:0
-msgid "Name"
-msgstr "Nom"
+#: code:addons/jasper_connector/report/report_soap.py:169
+#, python-format
+msgid ""
+"Error when evaluate attachment\n"
+"\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur lors de l'évaluation de la pièce jointe\n"
+"\n"
+"Message: \"%s\""
 
 #. module: jasper_connector
-#: help:jasper.document,server_id:0
-msgid "Select specific JasperServer"
-msgstr "Sélectionner un jasperserver spécifique"
+#: code:addons/jasper_connector/report/report_soap.py:192
+#, python-format
+msgid ""
+"Error when evaluate duplicate\n"
+"\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur lors de l'évaluation du nombre de copie\n"
+"\n"
+"Message \"%s\""
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:145
+#, python-format
+msgid ""
+"Error when evaluate field\n"
+"\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur lors de l'évaluation du champ\n"
+"\n"
+"Message: \"%s\""
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:216
+#, python-format
+msgid ""
+"Error when evaluate language\n"
+"\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur lors de l'évaluation de la langue\n"
+"\n"
+"Message: \"%s\""
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/models/document.py:396
+#, python-format
+msgid "Error, Authentification failed for %s/%s"
+msgstr "Erreur, l'authentification à échoué pour %s/%s"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/models/server.py:181
+#, python-format
+msgid "Error, JasperServer authentification failed for user %s/%s"
+msgstr ""
+"Erreur, l'authentification JasperServer à échoué pour l'utilisateur %s/%s"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/models/server.py:176
+#, python-format
+msgid "Error, JasperServer not found at %s (port: %d)"
+msgstr "Erreur, JasperServer non trouvé à %s (port: %d)"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/models/document.py:392
+#, python-format
+msgid "Error, server not found %s %d"
+msgstr "Erreur, le serveur n'a pas été trouvé pour %s %d"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "Execute SQL query after treatment"
+msgstr "Exécuter un requête SQL après le traitement"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "Execute SQL query before treatment"
+msgstr "Exécuter un requête SQL avant le traitement"
+
+#. module: jasper_connector
+#: field:jasper.document.extension,extension:0
+msgid "Extension"
+msgstr "Extension"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:140
+#: code:addons/jasper_connector/report/report_soap.py:144
+#: code:addons/jasper_connector/report/report_soap.py:148
+#: code:addons/jasper_connector/report/report_soap.py:152
+#, python-format
+msgid "Field Eval Error"
+msgstr "Erreur d'évaluation du champ"
+
+#. module: jasper_connector
+#: field:load.jrxml.file,datafile:0
+msgid "File"
+msgstr "Fichier"
+
+#. module: jasper_connector
+#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_9
+msgid "Flash Viewer"
+msgstr "Visionneuse Flash"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_search
+msgid "Format"
+msgstr "Format"
+
+#. module: jasper_connector
+#: field:jasper.document,format_choice:0
+msgid "Format Choice"
+msgstr "Choix du format"
+
+#. module: jasper_connector
+#: field:jasper.document,format:0
+msgid "Formats"
+msgstr "Formats"
+
+#. module: jasper_connector
+#: selection:jasper.document,check_sel:0
+msgid "Function"
+msgstr "Fonction"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:272
+#, python-format
+msgid "Function \"check_print\" return an error"
+msgstr "La fonction \"check_print\" retourne une erreur"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "General"
+msgstr "Général"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_search
+msgid "Group by..."
+msgstr "Regrouper par..."
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+#: field:jasper.document,group_ids:0
+msgid "Groups"
+msgstr "Groups"
+
+#. module: jasper_connector
+#: field:jasper.server,host:0
+msgid "Host"
+msgstr "Hôte"
+
+#. module: jasper_connector
+#: view:jasper.server:jasper_connector.view_jasper_connector_form
+msgid "Hostname or IP address"
+msgstr "Nom d'hôte ou adresse IP"
+
+#. module: jasper_connector
+#: field:jasper.document,id:0 field:jasper.document.extension,id:0
+#: field:jasper.document.label,id:0 field:jasper.document.parameter,id:0
+#: field:jasper.server,id:0 field:load.jrxml.file,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: jasper_connector
+#: help:jasper.server,prefix:0
+msgid ""
+"If prefix is filled, the reportUnit must in the new tree, usefull on a share"
+" hosting"
+msgstr ""
+"Si le préfix est rempli, le reportUnit sera dans une nouvelle arborescence, "
+"très utile en environnement mutualisé"
+
+#. module: jasper_connector
+#: help:jasper.document,attachment_use:0
+msgid ""
+"If you check this, then the second time the user prints with same attachment"
+" name, it returns the previous report."
+msgstr ""
+"Si vous cochez ceci, alors la seconde fois que l'utilisateur imprimera avec "
+"le même nom de pièce jointe, cela retournera le rapport stocké"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "Import JRXML"
+msgstr "Importer un JRXML"
+
+#. module: jasper_connector
+#: help:jasper.document,lang:0
+msgid ""
+"Indicate the lang to use for this report, use o as object to evaluate\n"
+"eg: o.partner_id.lang\n"
+" ctx as context\n"
+"eg: ctx.get('test')\n"
+" or\n"
+"'fr_FR'\n"
+"default use user's lang"
+msgstr ""
+"Indique la langue a utiliser pour ce rapport, utiliser o comme object à évaluer\n"
+"ex: o.partner_id.lang\n"
+" ctx comme context\n"
+"ex: ctx.get('test')\n"
+" ou\n"
+"'fr_FR'\n"
+"par défaut la langue de l’utilisateur est utilisé "
 
 #. module: jasper_connector
 #: help:jasper.document,duplicate:0
-msgid "Indicate the number of duplicate copie, use o as object to evaluate\n"
+msgid ""
+"Indicate the number of duplicate copie, use o as object to evaluate\n"
 "eg: o.partner_id.copy\n"
 "or\n"
 "'1'"
@@ -1119,45 +662,9 @@ msgstr ""
 "'1'"
 
 #. module: jasper_connector
-#: code:addons/jasper_connector/obj_server.py:184
-#, python-format
-msgid "JasperServer Connection OK"
-msgstr "La connexion à JasperServer est OK"
-
-#. module: jasper_connector
-#: field:jasper.document,depth:0
-msgid "Depth"
-msgstr "Profondeur"
-
-#. module: jasper_connector
-#: view:jasper.document:0
-#: field:jasper.document,mode:0
-msgid "Mode"
-msgstr "Mode"
-
-#. module: jasper_connector
-#: field:jasper.document,ctx:0
-msgid "Context"
-msgstr "Contexte"
-
-#. module: jasper_connector
-#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_5
-msgid "Microsoft® Excel 2007"
-msgstr "Microsoft® Excel 2007"
-
-#. module: jasper_connector
-#: view:jasper.server:0
-msgid "By default the password is jasperadmin"
-msgstr "Par défaut le mot de passe est jasperadmin"
-
-#. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:172
-#, python-format
-msgid "Unknown error when evaluate attachment\n"
-"Message: \"%s\""
-msgstr ""
-"Erreur inconnue lors de l'évaluation de la pièce jointe\n"
-"Message: \"%s\""
+#: help:jasper.document,enabled:0
+msgid "Indicates if this document is active or not"
+msgstr "Indique si ce document est actif ou pas"
 
 #. module: jasper_connector
 #: help:jasper.document,sql_view:0
@@ -1165,52 +672,315 @@ msgid "Insert your SQL view, if the report is base on it"
 msgstr "Inserer votre vue SQL, si le rapport est basé sur celle-ci"
 
 #. module: jasper_connector
+#: model:res.groups,name:jasper_connector.group_jasper_manager
+msgid "Jasper / Manager"
+msgstr "Jasper / Responsable"
+
+#. module: jasper_connector
+#: model:res.groups,name:jasper_connector.group_jasper_user
+msgid "Jasper / User"
+msgstr "Jasper / Utilisateur"
+
+#. module: jasper_connector
+#: model:ir.ui.menu,name:jasper_connector.menu_jasper
+msgid "Jasper Connector"
+msgstr "Connecteur Jasper"
+
+#. module: jasper_connector
+#: model:ir.model,name:jasper_connector.model_jasper_document
+#: view:jasper.document:jasper_connector.view_document_form
+#: view:jasper.document:jasper_connector.view_document_tree
+msgid "Jasper Document"
+msgstr "Document Jasper"
+
+#. module: jasper_connector
+#: model:ir.model,name:jasper_connector.model_jasper_document_extension
+msgid "Jasper Document Extension"
+msgstr "Extension des documents jasper"
+
+#. module: jasper_connector
+#: view:res.lang:jasper_connector.view_res_lang_form
+msgid "Jasper Locale Format"
+msgstr "Format de la localisation Jasper"
+
+#. module: jasper_connector
+#: model:ir.ui.menu,name:jasper_connector.menu_jasper_conn
+msgid "Jasper Reports"
+msgstr "Jasper Reports"
+
+#. module: jasper_connector
+#: view:jasper.server:jasper_connector.view_jasper_connector_form
+#: view:jasper.server:jasper_connector.view_jasper_connector_tree
+msgid "Jasper Server"
+msgstr "Jasper Server"
+
+#. module: jasper_connector
+#: field:jasper.document,jasper_file:0
+msgid "Jasper file"
+msgstr "Fichier Jasper"
+
+#. module: jasper_connector
+#: help:res.lang,js_pattern_currency:0
+msgid "Jasper pattern currency"
+msgstr "Modèle de la devise Jasper"
+
+#. module: jasper_connector
+#: help:res.lang,js_pattern_date:0
+msgid "Jasper pattern date"
+msgstr "Modèle de date Jasper"
+
+#. module: jasper_connector
+#: help:res.lang,js_pattern_datetime:0
+msgid "Jasper pattern datetime"
+msgstr "Modèle de la date et heure Jasper"
+
+#. module: jasper_connector
+#: help:res.lang,js_pattern_number:0
+msgid "Jasper pattern number"
+msgstr "Modèle de nombre Jasper"
+
+#. module: jasper_connector
+#: help:res.lang,js_pattern_time:0
+msgid "Jasper pattern time"
+msgstr "Modèle de l'heure Jasper"
+
+#. module: jasper_connector
+#: model:ir.model,name:jasper_connector.model_jasper_server
+msgid "Jasper server configuration"
+msgstr "Configuration JasperServer"
+
+#. module: jasper_connector
+#: model:ir.module.category,name:jasper_connector.module_category_reporting_jasperserver
+msgid "JasperReport"
+msgstr "JasperReport"
+
+#. module: jasper_connector
+#: field:res.groups,is_jasper:0
+msgid "JasperServer"
+msgstr "JasperServer"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/models/server.py:187
+#, python-format
+msgid "JasperServer Connection OK"
+msgstr "La connexion à JasperServer est OK"
+
+#. module: jasper_connector
+#: view:jasper.document.label:jasper_connector.view_jasper_document_label_form
+#: view:jasper.document.label:jasper_connector.view_jasper_document_label_tree
+msgid "Label"
+msgstr "Libellé"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+#: field:jasper.document,label_ids:0
+msgid "Labels"
+msgstr "Libellés"
+
+#. module: jasper_connector
+#: field:jasper.document,lang:0
+msgid "Lang"
+msgstr "Langue"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:213
+#: code:addons/jasper_connector/report/report_soap.py:216
+#: code:addons/jasper_connector/report/report_soap.py:219
+#: code:addons/jasper_connector/report/report_soap.py:222
+#, python-format
+msgid "Language Error"
+msgstr "Erreur de langue"
+
+#. module: jasper_connector
+#: model:ir.model,name:jasper_connector.model_res_lang
+msgid "Languages"
+msgstr "Langues"
+
+#. module: jasper_connector
+#: field:jasper.document,__last_update:0
+#: field:jasper.document.extension,__last_update:0
+#: field:jasper.document.label,__last_update:0
+#: field:jasper.document.parameter,__last_update:0
+#: field:jasper.server,__last_update:0 field:load.jrxml.file,__last_update:0
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: jasper_connector
+#: field:jasper.document,write_uid:0
+#: field:jasper.document.extension,write_uid:0
+#: field:jasper.document.label,write_uid:0
+#: field:jasper.document.parameter,write_uid:0 field:jasper.server,write_uid:0
+#: field:load.jrxml.file,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: jasper_connector
+#: field:jasper.document,write_date:0
+#: field:jasper.document.extension,write_date:0
+#: field:jasper.document.label,write_date:0
+#: field:jasper.document.parameter,write_date:0
+#: field:jasper.server,write_date:0 field:load.jrxml.file,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: jasper_connector
+#: field:jasper.document,only_one:0
+msgid "Launch one time for all ids"
+msgstr "Lancer une fois pour tous les IDS"
+
+#. module: jasper_connector
+#: help:jasper.document,only_one:0
+msgid "Launch the report only one time on multiple id"
+msgstr "Lancer le rapport une seule fois sur de multiple ID"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+#: view:jasper.document.label:jasper_connector.view_jasper_document_label_form
+#: view:jasper.document.parameter:jasper_connector.view_jasper_document_parameter_form
+msgid "Legend"
+msgstr "Légende"
+
+#. module: jasper_connector
+#: help:jasper.document,report_id:0
+msgid "Link to the report in ir.actions.report.xml"
+msgstr "Lien vers le rapport dans ir.actions.report.xml"
+
+#. module: jasper_connector
 #: model:ir.actions.act_window,name:jasper_connector.load_jrxml_file_wizard_action
-#: view:load.jrxml.file:0
+#: view:load.jrxml.file:jasper_connector.view_load_jrxml_file_form
 msgid "Load JRXML file"
 msgstr "Charger un fichier JRXML"
 
 #. module: jasper_connector
-#: field:jasper.document,attachment_use:0
-msgid "Reload from Attachment"
-msgstr "Recharger depuis la pièce jointe"
+#: model:ir.model,name:jasper_connector.model_load_jrxml_file
+msgid "Load file in the jasperdocument"
+msgstr "Chargement d'un document jasper"
 
 #. module: jasper_connector
-#: field:jasper.document,sequence:0
-#: field:jasper.server,sequence:0
-msgid "Sequence"
-msgstr "Séquence"
+#: model:ir.model,name:jasper_connector.model_jasper_document_label
+msgid "Manage label in document, for different language"
+msgstr "Gestion des libellés de document, pour les différentes langues"
 
 #. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:164
-#, python-format
-msgid "Error when evaluate attachment\n"
-"\n"
-"Message: \"%s\""
+#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_6
+msgid "Microsoft® Excel (97 -> 2003)"
+msgstr "Microsoft® Excel (97 -> 2003)"
+
+#. module: jasper_connector
+#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_5
+msgid "Microsoft® Excel 2007"
+msgstr "Microsoft® Excel 2007"
+
+#. module: jasper_connector
+#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_4
+msgid "Microsoft® Word 2007"
+msgstr "Microsoft® Word 2007"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_search
+#: field:jasper.document,mode:0
+msgid "Mode"
+msgstr "Mode"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_search
+msgid "Model"
+msgstr "Modèle"
+
+#. module: jasper_connector
+#: selection:jasper.document,format_choice:0
+msgid "Multi Format"
+msgstr "Format multiple"
+
+#. module: jasper_connector
+#: selection:jasper.document,mode:0
+msgid "Multiple Report"
+msgstr "Rapport multiple"
+
+#. module: jasper_connector
+#: field:jasper.document,name:0 field:jasper.document.extension,name:0
+#: field:jasper.document.parameter,name:0
+msgid "Name"
+msgstr "Nom"
+
+#. module: jasper_connector
+#: help:jasper.document,pdf_begin:0
+msgid ""
+"Name of the PDF file store as attachment to add at the first page (page "
+"number not recompute)"
 msgstr ""
-"Erreur lors de l'évaluation de la pièce jointe\n"
-"\n"
-"Message: \"%s\""
+"Nom du fichier PDF stocké comme pièce jointe pour l'ajouter en première page"
+" (la numérotation des pages n'est pas recalculé)"
 
 #. module: jasper_connector
-#: field:jasper.server,port:0
-msgid "Port"
-msgstr "Port"
+#: help:jasper.document,pdf_ended:0
+msgid ""
+"Name of the PDF file store as attachment to add at the last page (page "
+"number not recompute)"
+msgstr ""
+"Nom du fichier PDF stocké comme pièce jointe pour ajouter la dernière page "
+"(la numérotation des pages n'est pas recalculé)"
 
 #. module: jasper_connector
-#: view:jasper.document.parameter:0
-msgid "t: for time module"
-msgstr "t: pour le module time"
+#: help:jasper.document.parameter,name:0
+msgid "Name of the jasper parameter, the prefix must be OERP_"
+msgstr "Nom du paramètre jasper, le préfixe sera OERP_"
 
 #. module: jasper_connector
-#: field:load.jrxml.file,datafile:0
-msgid "File"
-msgstr "Fichier"
+#: help:jasper.document.label,value:0
+msgid ""
+"Name of the label, this field must be translate in all languages available "
+"in the database"
+msgstr ""
+"Nom du libellé, ce champ sera traduit dans toutes les langues disponible "
+"dans la base de données"
 
 #. module: jasper_connector
-#: field:jasper.document,report_id:0
-msgid "Report link"
-msgstr "Lien rapport"
+#: help:jasper.document.label,name:0
+msgid ""
+"Name of the parameter send to JasperServer, prefix with I18N_\n"
+"eg: test become I18N_TEST as parameter"
+msgstr ""
+"Nom du paramètre envoyé à JasperServer, préfixé par I18N_\n"
+"ex test devient I18N_TEST comme paramètre"
+
+#. module: jasper_connector
+#: field:jasper.document,sql_name:0
+msgid "Name of view"
+msgstr "Nom de la vue"
+
+#. module: jasper_connector
+#: view:load.jrxml.file:jasper_connector.view_load_jrxml_file_form
+msgid "Next"
+msgstr "Suivant"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/models/document.py:373
+#, python-format
+msgid "No JasperServer configuration found !"
+msgstr "Pas de configuration JasperServer trouvée !"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:491
+#, python-format
+msgid "No JasperServer configuration found!"
+msgstr "Pas de configuration du JasperServer trouvée!"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:320
+#, python-format
+msgid "No report name"
+msgstr "Pas de nom de rapport"
+
+#. module: jasper_connector
+#: selection:jasper.document,check_sel:0
+msgid "None"
+msgstr "Aucune"
+
+#. module: jasper_connector
+#: field:jasper.document,model_id:0
+msgid "Object Model"
+msgstr "Objet"
 
 #. module: jasper_connector
 #: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_3
@@ -1218,139 +988,436 @@ msgid "OpenOffice Calc"
 msgstr "OpenOffice Calc"
 
 #. module: jasper_connector
-#: view:jasper.document:0
-msgid "Condition to launch the printing report"
-msgstr "Condition à vérifier lors de l'impression du rapport"
+#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_1
+msgid "OpenOffice Writer"
+msgstr "OpenOffice Writer"
 
 #. module: jasper_connector
-#: view:jasper.server:0
-msgid "Hostname or IP address"
-msgstr "Nom d'hôte ou adresse IP"
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "PDF Merge"
+msgstr "Fusion de PDF"
 
 #. module: jasper_connector
-#: code:addons/jasper_connector/report/report_soap.py:159
-#: code:addons/jasper_connector/report/report_soap.py:163
-#: code:addons/jasper_connector/report/report_soap.py:167
-#: code:addons/jasper_connector/report/report_soap.py:171
-#, python-format
-msgid "Attachment Error"
-msgstr "Erreur de pièce jointe"
+#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_2
+msgid "PDF Viewer"
+msgstr "Visionneuse PDF"
 
 #. module: jasper_connector
-#: help:jasper.document,enabled:0
-msgid "Indicates if this document is active or not"
-msgstr "Indique si ce document est actif ou pas"
+#: field:jasper.document,pdf_begin:0
+msgid "PDF at begin"
+msgstr "PDF en page de début"
 
+#. module: jasper_connector
+#: field:jasper.document,pdf_ended:0
+msgid "PDF at end"
+msgstr "PDF de page de fin"
+
+#. module: jasper_connector
+#: field:jasper.document.label,name:0
+#: view:jasper.document.parameter:jasper_connector.view_jasper_document_parameter_form
+#: view:jasper.document.parameter:jasper_connector.view_jasper_document_parameter_tree
+msgid "Parameter"
+msgstr "Paramètre"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+#: field:jasper.document,param_ids:0
+msgid "Parameters"
+msgstr "Paramètres"
+
+#. module: jasper_connector
+#: model:jasper.document,name:jasper_connector.jasper_document_4
+msgid "Partner's List"
+msgstr "Liste des partenaires"
+
+#. module: jasper_connector
+#: field:jasper.server,pass:0
+msgid "Password"
+msgstr "Mot de passe"
+
+#. module: jasper_connector
+#: field:res.lang,js_pattern_currency:0
+msgid "Pattern Currency"
+msgstr "Modèle de devise"
+
+#. module: jasper_connector
+#: field:res.lang,js_pattern_date:0
+msgid "Pattern Date"
+msgstr "Modèle de date"
+
+#. module: jasper_connector
+#: field:res.lang,js_pattern_datetime:0
+msgid "Pattern Date Time"
+msgstr "Modèle de date et heure"
+
+#. module: jasper_connector
+#: field:res.lang,js_pattern_number:0
+msgid "Pattern Number"
+msgstr "Modèle de nombre"
+
+#. module: jasper_connector
+#: field:res.lang,js_pattern_time:0
+msgid "Pattern Time"
+msgstr "Modèle d'heure"
+
+#. module: jasper_connector
+#: field:jasper.server,port:0
+msgid "Port"
+msgstr "Port"
+
+#. module: jasper_connector
+#: field:jasper.server,prefix:0
+msgid "Prefix"
+msgstr "Préfixe"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "Processes"
+msgstr "Processus"
+
+#. module: jasper_connector
+#: field:jasper.document,attachment_use:0
+msgid "Reload from Attachment"
+msgstr "Recharger depuis la pièce jointe"
+
+#. module: jasper_connector
+#: field:jasper.document,report_unit:0
+msgid "Report Unit"
+msgstr "Report Unit"
+
+#. module: jasper_connector
+#: field:jasper.document,report_id:0
+msgid "Report link"
+msgstr "Lien rapport"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "Reports"
+msgstr "Rapports"
+
+#. module: jasper_connector
+#: field:jasper.server,repo:0
+msgid "Repository"
+msgstr "Dépôt"
+
+#. module: jasper_connector
+#: field:jasper.document,message_simple:0
+msgid "Return message"
+msgstr "Message de retour"
+
+#. module: jasper_connector
+#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_8
+msgid "Rich Text Format"
+msgstr "Format Texte Enrichi"
+
+#. module: jasper_connector
+#: selection:jasper.document,mode:0
+msgid "SQL"
+msgstr "SQL"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+#: field:jasper.document,sql_view:0
+msgid "SQL View"
+msgstr "Vue SQL"
+
+#. module: jasper_connector
+#: field:jasper.document,attachment:0
+msgid "Save As Attachment Prefix"
+msgstr "Sauvegarder comme préfixe de pièce jointe"
+
+#. module: jasper_connector
+#: help:load.jrxml.file,datafile:0
+msgid "Select file to transfert"
+msgstr "Sélectionner un fichier a transférer"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+msgid "Select report to launch when this report is launched"
+msgstr "Sélectionner les rapports à lancer lorsque le rapport est lancé"
+
+#. module: jasper_connector
+#: help:jasper.document,child_ids:0
+msgid "Select reports to launch when this report is called"
+msgstr "Sélectionner le rapport à lancer lorsque ce rapport est appelé"
+
+#. module: jasper_connector
+#: help:jasper.document,server_id:0
+msgid "Select specific JasperServer"
+msgstr "Sélectionner un jasperserver spécifique"
+
+#. module: jasper_connector
+#: field:jasper.document,sequence:0 field:jasper.server,sequence:0
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: jasper_connector
+#: field:jasper.document,server_id:0
+msgid "Server"
+msgstr "Serveur"
+
+#. module: jasper_connector
+#: model:ir.actions.act_window,name:jasper_connector.action_jasper_connector
+#: model:ir.ui.menu,name:jasper_connector.menu_jasper_connector
+msgid "Server configuration"
+msgstr "Configuration du serveur"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:436
 #, python-format
-#~ msgid "Connection error"
-#~ msgstr "Erreur de connexion"
+msgid "Server not found !"
+msgstr "Serveur non trouvé !"
 
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:477
 #, python-format
-#~ msgid "Authentification Error"
-#~ msgstr "Erreur d'authentification"
+msgid "Service name doesn't match!"
+msgstr "Le nom de service ne correspond pas!"
 
+#. module: jasper_connector
+#: selection:jasper.document,check_sel:0
+msgid "Simple"
+msgstr "Simplifié"
+
+#. module: jasper_connector
+#: selection:jasper.document,format_choice:0
+msgid "Single Format"
+msgstr "Format unique"
+
+#. module: jasper_connector
+#: field:jasper.server,status:0
+msgid "Status"
+msgstr "État"
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:276
 #, python-format
-#~ msgid "Cannot find the JasperServer at this address %s"
-#~ msgstr "Impossible de trouver le JasperServer à cette adresse %s"
+msgid ""
+"Syntax error when check condition\n"
+"\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur de syntaxe lors de la vérification de condition\n"
+"\n"
+"Message: \"%s\""
 
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:165
 #, python-format
-#~ msgid "Invalid login or password"
-#~ msgstr "Identifiant ou mot de passe incorrect"
+msgid ""
+"Syntax error when evaluate attachment\n"
+"\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur de syntaxe lors de l'évaluation de la pièce jointe\n"
+"\n"
+"Message: \"%s\""
 
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:188
 #, python-format
-#~ msgid ""
-#~ "Code: %s\n"
-#~ "Message: %s"
-#~ msgstr ""
-#~ "Code erreur: %s\n"
-#~ "Message: %s"
+msgid ""
+"Syntax error when evaluate duplicate\n"
+"\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur de syntaxe lors de l'évaluation du nombre de copie\n"
+"\n"
+"Message: \"%s\""
 
-#~ msgid ""
-#~ "Indicate the lang to use for this report, use o as object to evaluate\n"
-#~ "eg: o.partner_id.lang\n"
-#~ "or\n"
-#~ "'fr_FR'\n"
-#~ "default use user's lang"
-#~ msgstr ""
-#~ "Indiquer la langue a utilisée pour ce rapport, utilisez o pour l'objet a évalué\n"
-#~ "ex: o.partner_id.lang\n"
-#~ "or\n"
-#~ "'fr_FR'\n"
-#~ "par defaut la langue est celle de l'utilisateur"
-
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:141
 #, python-format
-#~ msgid "Unknown Error"
-#~ msgstr "Erreur inconnue"
+msgid ""
+"Syntax error when evaluate field\n"
+"\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur de syntaxe lors de l'évaluation du champ\n"
+"\n"
+"Message: \"%s\""
 
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:213
 #, python-format
-#~ msgid ""
-#~ "Content-type: %s\n"
-#~ "Message:%s"
-#~ msgstr ""
-#~ "Type de contenu: %s\n"
-#~ "Message:%s"
+msgid ""
+"Syntax error when evaluate language\n"
+"\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur de syntaxe lors de l'évaluation de la langue\n"
+"\n"
+"Message: \"%s\""
 
-#~ msgid "Make template"
-#~ msgstr "Générer un template"
+#. module: jasper_connector
+#: model:jasper.document.extension,name:jasper_connector.jasper_document_extension_7
+msgid "Text Editor"
+msgstr "Editeur de texte"
 
-#~ msgid "Filename"
-#~ msgstr "Nom du fichier"
+#. module: jasper_connector
+#: help:jasper.document,sequence:0
+msgid ""
+"The sequence is used when launch a multple report, to select the order to "
+"launch"
+msgstr ""
+"La séquence est utilisé lorsque de multiple rapport sont lancés, pour "
+"sélectionner l'ordre à lancer"
 
-#~ msgid "Format choice"
-#~ msgstr "Choix du format"
+#. module: jasper_connector
+#: view:jasper.document.label:jasper_connector.view_jasper_document_label_form
+msgid ""
+"These parameters are translate in the language define in the general tab"
+msgstr ""
+"Ces paramètres seront traduis dans la langue définit dans l'onglet Général"
 
-#~ msgid "ir.values"
-#~ msgstr "ir.values"
+#. module: jasper_connector
+#: help:jasper.document,check_simple:0
+msgid ""
+"This code inside this field must return True to send report execution\n"
+"eg o.state in ('draft', 'open')"
+msgstr ""
+"Le code à l'intérieur de la fonction doit retourner True pour executer le rapport\n"
+"ex o.state in ('draft', 'open')"
 
-#~ msgid "Indent the XML output ?"
-#~ msgstr "Indenter le XML ?"
+#. module: jasper_connector
+#: help:jasper.document,after:0
+msgid ""
+"This field must be filled with a valid SQL request and will be executed "
+"AFTER the report edition"
+msgstr ""
+"Ce champ doit être remplit avec une requête SQL valide et sera exécuté APRÈS"
+" le rapport d'édition"
 
-#~ msgid "Expression for duplicate the number of copie"
-#~ msgstr "Expression pour dupliquer le nombre de copie"
+#. module: jasper_connector
+#: help:jasper.document,before:0
+msgid ""
+"This field must be filled with a valid SQL request and will be executed "
+"BEFORE the report edition"
+msgstr ""
+"Ce champ doit être remplit avec une requête SQL valide et sera exécuté AVANT"
+" le rapport d'édition"
 
-#~ msgid "OK"
-#~ msgstr "Code"
+#. module: jasper_connector
+#: help:jasper.document,attachment:0
+msgid ""
+"This is the filename of the attachment used to store the printing result. "
+"Keep empty to not save the printed reports. You can use a python expression "
+"with the object and time variables."
+msgstr ""
+"Ceci est le nom de la pièce jointe utiliser pour le stockage de l'impression"
+" produite, Laisser vide pour ne pas sauvegarder le rapport imprimé. Vous "
+"pouvez utiliser une expression python avec object et time comme variables."
 
-#~ msgid "Make XML Template"
-#~ msgstr "Générer un modèle XML"
-
-#~ msgid "Service name"
-#~ msgstr "Nom du service"
-
-#~ msgid "Select the location to save the data file"
-#~ msgstr "Sélectionner un emplacement ou sauvegarder le fichier de données"
-
-#~ msgid "Configuration"
-#~ msgstr "Configuration"
-
-#~ msgid "Check this if you want to hide button in toolbar"
-#~ msgstr ""
-#~ "Cocher ceci si vous souhaitez masquer le bouton dans la barre à droite"
-
-#~ msgid "Save template"
-#~ msgstr "Sauvegarder modèle"
-
-#~ msgid "Data"
-#~ msgstr "Données"
-
-#~ msgid "Hide in toolbar"
-#~ msgstr "Masque de la barre"
-
-#~ msgid "Output format"
-#~ msgstr "Format de sortie"
-
-#~ msgid "Done"
-#~ msgstr "Terminer"
-
-#~ msgid "Document Print"
-#~ msgstr "Impression de document"
-
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:288
 #, python-format
-#~ msgid "Main company have no address defined on the partner!"
-#~ msgstr "La société principale n'a pas d'adresse définit sur le partenaire!"
+msgid ""
+"Unknown error when check condition\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur inconnue lors de la vérification de condition\n"
+"Message: \"%s\""
 
-#~ msgid "Enter the service name register at start by OpenERP Server"
-#~ msgstr "Entrer le nom du service enregistré au démarrage de OpenERP Server"
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:177
+#, python-format
+msgid ""
+"Unknown error when evaluate attachment\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur inconnue lors de l'évaluation de la pièce jointe\n"
+"Message: \"%s\""
 
-#~ msgid "Id"
-#~ msgstr "Id"
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:200
+#, python-format
+msgid ""
+"Unknown error when evaluate duplicate\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur inconnu lors de l'évaluation du nombre de copie\n"
+"Message: \"%s\""
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:153
+#, python-format
+msgid ""
+"Unknown error when evaluate field\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur inconnu lors de l'évaluation du champ\n"
+"Méssage: \"%s\""
+
+#. module: jasper_connector
+#: code:addons/jasper_connector/report/report_soap.py:222
+#, python-format
+msgid ""
+"Unknown error when evaluate language\n"
+"Message: \"%s\""
+msgstr ""
+"Erreur inconnu lors de l'évaluation de la langue\n"
+"Message:\"%s\""
+
+#. module: jasper_connector
+#: view:jasper.document.parameter:jasper_connector.view_jasper_document_parameter_form
+msgid "Use [[ o.name ]] to called browse object, see below for possibility"
+msgstr ""
+"Utiliser [[ o.name ]] pour appeller la methode browse de l'objet, voir ci "
+"dessous pour les possibilités"
+
+#. module: jasper_connector
+#: field:jasper.server,user:0
+msgid "Username"
+msgstr "Identifiant"
+
+#. module: jasper_connector
+#: field:jasper.document.label,value:0
+msgid "Value"
+msgstr "Valeur"
+
+#. module: jasper_connector
+#: view:jasper.document:jasper_connector.view_document_form
+#: selection:jasper.document,mode:0
+msgid "XML"
+msgstr "XML"
+
+#. module: jasper_connector
+#: view:jasper.document.parameter:jasper_connector.view_jasper_document_parameter_form
+msgid "c: for user s company"
+msgstr "c: pour la companie de l'utilisateur"
+
+#. module: jasper_connector
+#: view:jasper.server:jasper_connector.view_jasper_connector_form
+msgid "eg: 8080"
+msgstr "ex: 8080"
+
+#. module: jasper_connector
+#: view:jasper.server:jasper_connector.view_jasper_connector_form
+msgid "eg: localhost or 127.0.0.1"
+msgstr "ex: localhost ou 127.0.0.1"
+
+#. module: jasper_connector
+#: help:jasper.document,check_sel:0
+msgid ""
+"if None, no check\n"
+"if Simple, define on Check Simple the condition\n"
+" if function, the object have check_print function"
+msgstr ""
+"Si Aucune, pas de vérification\n"
+"Si Simplifié, définir la condition dans Vérification simplifiée\n"
+"Si Fonction, l'objet doit avoir une fonction check_print"
+
+#. module: jasper_connector
+#: view:jasper.document.parameter:jasper_connector.view_jasper_document_parameter_form
+msgid "o: for object"
+msgstr "o: pour l'objet en cours"
+
+#. module: jasper_connector
+#: view:jasper.document.parameter:jasper_connector.view_jasper_document_parameter_form
+msgid "t: for time module"
+msgstr "t: pour le module time"
+
+#. module: jasper_connector
+#: view:jasper.document.parameter:jasper_connector.view_jasper_document_parameter_form
+msgid "u: for current user (user launched the report)"
+msgstr "u: pour l'utilisateur courant (utilisateur qui a lancé lédition)"
