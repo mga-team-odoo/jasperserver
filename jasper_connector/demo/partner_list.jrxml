@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2016-08-28T17:36:41 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="partner_list" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="08e18970-153f-48eb-9d02-de5773e63892">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Contact Type">
 		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{Contact Type} == "invoice"]]></conditionExpression>
@@ -78,91 +81,115 @@
 		<groupHeader>
 			<band height="101">
 				<textField>
-					<reportElement x="23" y="0" width="280" height="20" uuid="3633d7f7-ef98-4125-a630-40739005d323"/>
+					<reportElement x="100" y="0" width="454" height="20" uuid="3633d7f7-ef98-4125-a630-40739005d323"/>
 					<textElement verticalAlignment="Middle">
 						<font isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{Company}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement x="23" y="20" width="280" height="20" uuid="555212cb-c6bc-4b29-9b88-4606263fe2cd"/>
+					<reportElement x="100" y="20" width="454" height="20" uuid="555212cb-c6bc-4b29-9b88-4606263fe2cd"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{Partner Address}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement x="23" y="40" width="280" height="20" uuid="8dcbd048-cc21-4828-b555-2bdf554d5040"/>
+					<reportElement x="100" y="40" width="454" height="20" uuid="8dcbd048-cc21-4828-b555-2bdf554d5040"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{Partner Address2}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement x="23" y="59" width="278" height="20" uuid="a361126f-6a43-4b4f-83e4-0b2e3cadc993"/>
+					<reportElement x="100" y="59" width="454" height="20" uuid="a361126f-6a43-4b4f-83e4-0b2e3cadc993"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{Partner ZIP} + " " + $F{Partner City}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement x="23" y="79" width="278" height="20" uuid="589dc211-3b49-49af-b073-b6bf15fdfb79"/>
+					<reportElement x="100" y="79" width="454" height="20" uuid="589dc211-3b49-49af-b073-b6bf15fdfb79"/>
 					<textElement verticalAlignment="Middle"/>
 					<textFieldExpression><![CDATA[$F{Partner country}]]></textFieldExpression>
 				</textField>
 				<line>
-					<reportElement x="17" y="0" width="1" height="99" uuid="d641d367-cce1-4bc4-9108-b2090a27bee2"/>
+					<reportElement x="94" y="0" width="1" height="99" uuid="d641d367-cce1-4bc4-9108-b2090a27bee2"/>
 					<graphicElement>
 						<pen lineWidth="2.5"/>
 					</graphicElement>
 				</line>
+				<image scaleImage="RetainShape" onErrorType="Blank" hyperlinkType="Reference">
+					<reportElement x="20" y="24" width="50" height="50" uuid="b36b4378-c029-4032-8ac8-01eeda5027da"/>
+					<imageExpression><![CDATA["http://mirounga.fr/logo-js-mirounga.png"]]></imageExpression>
+					<hyperlinkReferenceExpression><![CDATA["http://mirounga.fr"]]></hyperlinkReferenceExpression>
+				</image>
 			</band>
 		</groupHeader>
 	</group>
 	<background>
-		<band splitType="Stretch"/>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="-17" y="150" width="16" height="396" forecolor="rgba(95, 96, 98, 0.19607843)" uuid="27352eac-7a7f-4bb0-b285-4418662c808f"/>
+				<textElement rotation="Left"/>
+				<text><![CDATA[Report made by Mirounga with JasperStudio, contact us at http://mirounga.fr]]></text>
+			</staticText>
+		</band>
 	</background>
 	<pageHeader>
-		<band height="35" splitType="Stretch">
+		<band height="38" splitType="Stretch">
+			<rectangle radius="8">
+				<reportElement x="0" y="1" width="554" height="35" uuid="260861aa-e826-49eb-bd10-d9511e08c8b0"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#E95E40"/>
+				</graphicElement>
+			</rectangle>
 			<textField>
 				<reportElement x="0" y="0" width="555" height="35" uuid="12cf8f71-1cec-42b5-ac65-4d2397e73d7b"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{I18N_TITLE}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Partner form"]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
 	<columnHeader>
 		<band height="24" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement x="0" y="2" width="555" height="20" uuid="2a3beaab-e95c-4706-9512-d03c5775bc2e"/>
+				<graphicElement>
+					<pen lineColor="#5F6062"/>
+				</graphicElement>
+			</rectangle>
 			<textField>
 				<reportElement x="109" y="2" width="197" height="20" uuid="c1025b66-d22d-4d41-9372-ad4d99127b3c"/>
-				<textElement verticalAlignment="Middle" markup="none">
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
 					<font isBold="true" isItalic="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{I18N_COL_ADDRESS}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Address"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="315" y="2" width="61" height="20" uuid="1b6ab4e9-580e-4518-b0a7-dd02ab7b6521"/>
-				<textElement verticalAlignment="Middle" markup="none">
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
 					<font isBold="true" isItalic="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{I18N_COL_ZIP}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Zip"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="385" y="2" width="88" height="20" uuid="ee5c02df-0c03-4837-ab08-fc3510c023a2"/>
-				<textElement verticalAlignment="Middle" markup="none">
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
 					<font isBold="true" isItalic="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{I18N_COL_CITY}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["City"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="482" y="2" width="74" height="20" uuid="ec1b3af9-787c-40ba-bae0-2c36a6434295"/>
-				<textElement verticalAlignment="Middle" markup="none">
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
 					<font isBold="true" isItalic="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{I18N_COL_COUNTRY}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Country"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="2" width="100" height="20" uuid="b592a933-8f26-4e15-a642-68b3848e36a7"/>
-				<textElement verticalAlignment="Middle" markup="none">
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
 					<font isBold="true" isItalic="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{I18N_COL_CONTACT}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Contact"]]></textFieldExpression>
 			</textField>
 		</band>
 	</columnHeader>
@@ -193,7 +220,7 @@
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{Contact country}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement style="Contact Type" x="0" y="2" width="100" height="20" uuid="e6144d33-856f-4301-83b3-9a68b8ff0662"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{Contact}]]></textFieldExpression>
