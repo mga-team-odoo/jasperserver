@@ -396,7 +396,7 @@ class jasper_document(orm.Model):
                 _('Error, Authentification failed for %s/%s') % (js.user,
                                                                  js.pwd))
         except jasperlib.ServerError, e:
-            raise osv.except_osv(_('Error'), str(e).decode('utf-8'))
+            raise osv.except_osv(_('Error'), e)
 
         return True
 
