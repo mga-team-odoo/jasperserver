@@ -4,7 +4,7 @@
 #    jasper_connector module for OpenERP
 #    Copyright (c) 2008-2009 EVERLIBRE (http://everlibre.fr) Eric VERNICHON
 #    Copyright (C) 2009-2011 SYLEAM ([http://www.syleam.fr]) Christophe CHAUVET
-#    Copyright (C) 2015 MIROUNGA (<http://www.mirounga.fr/>)
+#    Copyright (C) 2015-2016 MIROUNGA (<http://www.mirounga.fr/>)
 #              Christophe CHAUVET <christophe.chauvet@gmail.com>
 #
 #    This file is a part of jasper_connector

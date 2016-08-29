@@ -3,7 +3,9 @@
 #
 #    jasper_connector module for OpenERP, Management module for Jasper Server
 #    Copyright (C) 2013 SYLEAM (<http://www.syleam.fr/>)
-#              Christophe CHAUVET <christophe.chauvet@syleam.fr>
+#              Christophe CHAUVET <christophe.chauvet@gmail.com>
+#    Copyright (C) 2015-2016 MIROUNGA (<http://www.mirounga.fr/>)
+#              Christophe CHAUVET <christophe.chauvet@gmail.com>
 #
 #    This file is a part of jasper_connector
 #
@@ -24,6 +26,7 @@
 
 from lxml import etree
 from StringIO import StringIO
+import unicodedata
 
 import socket
 import re
@@ -199,8 +202,8 @@ class Jasper(object):
             fp.close()
 
             raise ServerError(
-                u'[%s] %s' % (tree.xpath('//returnCode')[0].text.encode('utf-8'),  # noqa
-                tree.xpath('//returnMessage')[0].text.encode('utf-8'))
+                u'[%s] %s' % (tree.xpath('//returnCode')[0].text,  # noqa
+                tree.xpath('//returnMessage')[0].text)
             )
 
     def create_request(self, operation='list', wsType='', uri='/', name='',
