@@ -26,7 +26,6 @@
 
 from lxml import etree
 from StringIO import StringIO
-import unicodedata
 
 import socket
 import re
