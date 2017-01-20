@@ -79,6 +79,7 @@ class JasperServer(orm.Model):
         'repo': '/jasperserver/services/repository',
         'sequence': 10,
         'prefix': False,
+        'enable': True,
     }
 
     def __init__(self, pool, cr):

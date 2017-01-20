@@ -158,6 +158,7 @@ class jasper_document(orm.Model):
         'check_sel': 'none',
         'check_simple': False,
         'message_simple': False,
+        'enabled': True,
     }
 
     def __init__(self, pool, cr):
