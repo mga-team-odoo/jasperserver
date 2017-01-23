@@ -82,6 +82,7 @@ class HTML2Text(HTMLParser):
         elif tag.startswith('h'):
             self.is_title = True
 
+
 def ParseXML(source):
     """
     Read the JasperServer Error code
