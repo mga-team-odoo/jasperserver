@@ -28,11 +28,15 @@ from cStringIO import StringIO
 from HTMLParser import HTMLParser
 from lxml.etree import parse
 from tempfile import mkstemp
-from dime import Message
 import os
 
 import email
 import re
+
+try:
+    from dime import Message
+except (ImportError, IOError) as err:
+    Message = None
 
 
 class NotMultipartError(Exception):
@@ -78,25 +82,6 @@ class HTML2Text(HTMLParser):
         elif tag.startswith('h'):
             self.is_title = True
 
-
-# def ParseDIME(source, list_file):
-#     """
-#     We must decompose the dime record to return the PDF only
-#     """
-#     fp = StringIO(source)
-#     a = Message.load(fp)
-#     for x in a.records:
-#         if x.type.value == 'application/pdf':
-#             content = x.data
-#             # Store the PDF in TEMP directory
-#             fd, f_name = mkstemp(suffix='.pdf', prefix='jasper')
-#             list_file.append(f_name)
-#             fpdf = open(f_name, 'w+b')
-#             fpdf.write(content)
-#             fpdf.close()
-#             os.close(fd)
-#
-#
 def ParseXML(source):
     """
     Read the JasperServer Error code
@@ -131,6 +116,8 @@ def ParseContent(source, content_type='application/dime'):
     Parse the content and return a decode stream
     """
     if content_type == 'application/dime':
+        if Message is None:
+            raise Exception('error', 'python dime package is not installed!')
         fp = StringIO(source)
         a = Message.load(fp)
         content = ''
@@ -191,6 +178,7 @@ def WriteContent(content, list_file):
     fpdf.write(content)
     fpdf.close()
     os.close(fd)
+
 
 if __name__ == '__main__':
     import logging

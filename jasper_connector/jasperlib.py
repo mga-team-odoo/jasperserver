@@ -47,7 +47,6 @@ except ImportError:
     Http = None
 
 
-# Create some exception
 class JasperException(Exception):
     pass
 
@@ -270,6 +269,7 @@ class Jasper(object):
         Return the last SOAP query as text
         """
         return self.body
+
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)

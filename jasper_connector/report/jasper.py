@@ -52,6 +52,7 @@ class report_jasper(report_int):
         except JasperException, e:
             raise except_osv(e.title, e.message)
 
+
 report_jasper('report.print.jasper.server')
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
