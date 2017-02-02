@@ -31,6 +31,7 @@ from openerp.tools.sql import drop_view_if_exists
 from openerp.tools.translate import _
 from openerp.addons.jasper_connector.common import (
     registered_report, KNOWN_PARAMETERS)
+from openerp import SUPERUSER_ID
 from StringIO import StringIO
 from lxml import etree
 import base64
@@ -203,7 +204,7 @@ class jasper_document(orm.Model):
                            WHERE id=%s""", (report_id, id))
             value = 'ir.actions.report.xml,' + str(report_id)
             self.pool['ir.model.data'].ir_set(
-                cr, uid, 'action', 'client_print_multi', doc.name,
+                cr, SUPERUSER_ID, 'action', 'client_print_multi', doc.name,
                 [doc.model_id.model], value, replace=False, isobject=True)
         registered_report('jasper.report_%d' % (doc.id,))
 
