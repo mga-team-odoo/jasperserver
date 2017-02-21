@@ -28,6 +28,7 @@ from openerp.osv import orm
 from openerp.osv import fields
 from openerp.tools.sql import drop_view_if_exists
 from openerp.tools.translate import _
+from openerp import SUPERUSER_ID
 from jasper_server.common import registered_report, KNOWN_PARAMETERS
 from StringIO import StringIO
 from lxml import etree
@@ -199,7 +200,7 @@ class jasper_document(orm.Model):
             cr.execute("""UPDATE jasper_document SET report_id=%s
                            WHERE id=%s""", (report_id, id))
             value = 'ir.actions.report.xml,' + str(report_id)
-            self.pool.get('ir.model.data').ir_set(cr, uid, 'action',
+            self.pool.get('ir.model.data').ir_set(cr, SUPERUSER_ID, 'action',
                                                   'client_print_multi',
                                                   doc.name,
                                                   [doc.model_id.model],
@@ -257,7 +258,7 @@ class jasper_document(orm.Model):
         if not self.action_values(cr, uid, doc.report_id.id, context=context):
             value = 'ir.actions.report.xml,%d' % doc.report_id.id
             _logger.debug('create_values -> ' + value)
-            self.pool.get('ir.model.data').ir_set(cr, uid, 'action',
+            self.pool.get('ir.model.data').ir_set(cr, SUPERUSER_ID, 'action',
                                                   'client_print_multi',
                                                   doc.name,
                                                   [doc.model_id.model],
